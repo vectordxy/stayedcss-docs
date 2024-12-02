@@ -1,14 +1,33 @@
-import { lib } from "./lib";
+import Button from "./Button";
+import { style, darkStyle } from "./css-module/getModule";
 
 export default function Home() {
-  const mainStyle = {
-    name: "button",
-    component: "Home",
-    style: {
-      backgroundColor: "blue",
-      color: "white",
-      padding: "100px",
+  const styles = style({
+    componentName: "Home",
+    button: {
+      backgroundColor: "yellow",
+      padding: 10,
+      ":hover": {
+        backgroundColor: "red",
+      },
     },
-  };
-  return <div className={lib(mainStyle)}>hello world</div>;
+  });
+
+  darkStyle({
+    componentName: "Home",
+    button: {
+      backgroundColor: "blue",
+      padding: 10,
+      ":hover": {
+        backgroundColor: "black",
+      },
+    },
+  });
+
+  return (
+    <div>
+      <div className={styles.button}>hello</div>
+      <Button />
+    </div>
+  );
 }
