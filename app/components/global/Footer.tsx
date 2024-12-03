@@ -3,13 +3,11 @@ import { applyStyle } from "@/app/utils/getModule";
 
 export default function Footer() {
   return (
-    <>
-      <div className={style.container}>
-        <div className={style.box}>
-          Copyright 2024. vectordxy All Rights Reserved.
-        </div>
+    <div className={style.container}>
+      <div className={style.box}>
+        Copyright 2024. vectordxy All Rights Reserved.
       </div>
-    </>
+    </div>
   );
 }
 
@@ -22,7 +20,7 @@ const style = applyStyle({
     justifyContent: "center",
   },
   box: {
-    width: "95%",
+    width: "90%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

@@ -3,6 +3,7 @@ import { colors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
 import DarkModeButton from "./DarkModeButton";
 import Github from "@/app/assets/svg/Github";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -12,16 +13,19 @@ export default function NavBar() {
           <div className={`${boldFont.className} ${style.title}`}>
             {projectTitle}
           </div>
-          <DarkModeButton />
-          {/* <span className={styles.version}>v{projectVersion}</span> */}
+          {/* <DarkModeButton /> */}
         </div>
 
         <div className={style.leftItems}>
           <div className={style.leftItem}>Docs</div>
           <div className={style.leftItem}>Playground</div>
-          <div className={style.icon}>
+          <a
+            target="_blank"
+            href="https://github.com/vectordxy/stayedcss"
+            className={style.icon}
+          >
             <Github />
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -48,6 +52,7 @@ const style = applyStyle({
   },
   titleContainer: {
     display: "flex",
+    alignItems: "center",
   },
   title: {
     fontSize: 20,

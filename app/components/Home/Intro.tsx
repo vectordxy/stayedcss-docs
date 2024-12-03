@@ -1,16 +1,19 @@
 import { colors } from "@/app/utils/constant";
-import { boldFont } from "@/app/utils/fonts";
+import { boldFont, lightFont } from "@/app/utils/fonts";
 import { applyStyle } from "@/app/utils/getModule";
 
 export default function Intro() {
   return (
     <div className={style.container}>
       <div className={`${boldFont.className} ${style.title}`}>
-        The Static CSS Library for Next.js
+        The Powerful CSS Library for Next.js
       </div>
-      <div className={style.subTitle}>
-        Don't need to import 'use client'. Optimized for server-side rendering
-        and performance.
+      <div className={`${lightFont.className} ${style.subTitle}`}>
+        <span className={`${boldFont.className}`}>
+          Static First, Also Ready for Dynamic.
+        </span>{" "}
+        Easily combine static and dynamic styles for your needs. Make your
+        projects better with simple CSS tools.
       </div>
       <div className={style.buttonContainer}>
         <div className={style.startButton}>Get Started</div>
@@ -30,19 +33,20 @@ const style = applyStyle({
   },
   title: {
     fontSize: 60,
-    fontWeight: 600,
   },
   subTitle: {
-    margin: 30,
+    width: 900,
+    margin: "27px 0 70px 0",
     fontSize: 18,
-    color: colors[5],
+    color: colors[7],
+    lineHeight: "1.5em",
   },
   buttonContainer: {
     display: "flex",
   },
   startButton: {
     padding: "18px 20px",
-    backgroundColor: colors[2],
+    backgroundColor: colors[0],
     boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
     borderRadius: 10,
     fontSize: 14,

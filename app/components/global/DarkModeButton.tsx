@@ -1,17 +1,16 @@
 "use client";
 
-import LightMode from "@/app/assets/svg/LightMode";
+import { DarkMode, LightMode } from "@/app/assets/svg/Mode";
 import { changeMode, applyClientStyle } from "../../utils/getClientModule";
-import DarkMode from "@/app/assets/svg/DarkMode";
 
 export default function DarkModeButton() {
   return (
     <div className={style.container}>
       <span onClick={() => changeMode("light")}>
-        <LightMode />
+        <LightMode size={18} />
       </span>
       <span className={style.button} onClick={() => changeMode("dark")}>
-        <DarkMode />
+        <DarkMode size={18} />
       </span>
     </div>
   );
