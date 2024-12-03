@@ -1,6 +1,6 @@
 "use client";
 
-import { changeMode } from "./css-module/getClientModule";
+import { changeMode } from "../../utils/getClientModule";
 
 export default function Button() {
   return (
