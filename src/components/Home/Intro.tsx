@@ -10,14 +10,12 @@ export default function Intro() {
       </div>
       <div className={`${lightFont.className} ${style.subTitle}`}>
         <span className={`${boldFont.className}`}>
-          Static First, Also Ready for Dynamic.
+          Static First, also Ready for Dynamic.
         </span>{" "}
         Easily combine static and dynamic styles for your needs. Make your
         projects better with simple CSS tools.
       </div>
-      <div className={style.buttonContainer}>
-        <div className={style.startButton}>Get Started</div>
-      </div>
+      <div className={style.startButton}>Get Started</div>
     </div>
   );
 }
@@ -32,28 +30,35 @@ const style = applyStyle({
     alignItems: "center",
   },
   title: {
-    fontSize: 60,
+    fontSize: 56,
   },
   subTitle: {
-    width: 900,
+    width: 750,
     margin: "27px 0 70px 0",
     fontSize: 18,
-    color: colors[7],
     lineHeight: "1.5em",
-  },
-  buttonContainer: {
-    display: "flex",
   },
   startButton: {
     padding: "18px 20px",
-    backgroundColor: colors[0],
-    boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-    borderRadius: 10,
+    border: "solid 1px black",
     fontSize: 14,
     transition: "background-color 0.2s ease-in-out",
     ":hover": {
-      backgroundColor: colors[1],
+      borderColor: colors[6],
+      color: colors[6],
       cursor: "pointer",
+    },
+  },
+  "@mobile": {
+    title: {
+      width: "80%",
+      fontSize: 42,
+    },
+    subTitle: {
+      width: "80%",
+      margin: "27px 0 70px 0",
+      fontSize: 16,
+      lineHeight: "1.5em",
     },
   },
 });

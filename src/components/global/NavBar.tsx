@@ -58,13 +58,6 @@ const style = applyStyle({
     fontSize: 20,
     fontWeight: 500,
   },
-  version: {
-    fontSize: 12,
-    padding: "5px 10px",
-    margin: 5,
-    backgroundColor: colors[1],
-    borderRadius: 10,
-  },
   leftItems: {
     display: "flex",
   },
@@ -73,7 +66,7 @@ const style = applyStyle({
     padding: 10,
     fontSize: 14,
     ":hover": {
-      color: colors[4],
+      color: colors[6],
       cursor: "pointer",
     },
   },

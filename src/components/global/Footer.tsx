@@ -1,4 +1,4 @@
-import { colors } from "@/src/utils/constant";
+import { colors, grayColors } from "@/src/utils/constant";
 import { applyStyle } from "@/src/utils/getModule";
 
 export default function Footer() {
@@ -25,7 +25,7 @@ const style = applyStyle({
     justifyContent: "center",
     alignItems: "center",
     fontSize: 14,
-    color: colors[5],
-    borderTop: `solid 1px ${colors[1]}`,
+    color: grayColors[5],
+    borderTop: `solid 1px ${grayColors[2]}`,
   },
 });
