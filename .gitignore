@@ -40,6 +40,5 @@ yarn-error.log*
 next-env.d.ts
 
 stylecache
-app/utils/
 *.tgz
-stayedcss/
+stayedcss

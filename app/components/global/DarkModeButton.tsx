@@ -1,28 +1,29 @@
 "use client";
 
-import { applyStyle } from "@/app/utils/getModule";
+import LightMode from "@/app/assets/svg/LightMode";
 import { changeMode, applyClientStyle } from "../../utils/getClientModule";
+import DarkMode from "@/app/assets/svg/DarkMode";
 
-export default function DarkModediv() {
+export default function DarkModeButton() {
   return (
-    <>
-      <div className={style.container}>
-        <div onClick={() => changeMode("light")}>Light</div>
-        <div className={style.button} onClick={() => changeMode("dark")}>
-          Dark
-        </div>
-      </div>
-    </>
+    <div className={style.container}>
+      <span onClick={() => changeMode("light")}>
+        <LightMode />
+      </span>
+      <span className={style.button} onClick={() => changeMode("dark")}>
+        <DarkMode />
+      </span>
+    </div>
   );
 }
 
 const style = applyClientStyle({
-  componentId: "components/global/DarkModediv",
+  componentId: "components/global/DarkModeButton",
   container: {
     display: "flex",
     alignItems: "center",
   },
   button: {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
   },
 });

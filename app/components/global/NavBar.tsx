@@ -2,7 +2,8 @@ import { boldFont } from "@/app/utils/fonts";
 import { colors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
 import DarkModeButton from "./DarkModeButton";
-// import GithubIcon from "../../../assets/github.svg";
+import Github from "@/app/assets/svg/Github";
+
 export default function NavBar() {
   return (
     <div className={style.container}>
@@ -14,10 +15,13 @@ export default function NavBar() {
           <DarkModeButton />
           {/* <span className={styles.version}>v{projectVersion}</span> */}
         </div>
+
         <div className={style.leftItems}>
           <div className={style.leftItem}>Docs</div>
           <div className={style.leftItem}>Playground</div>
-          {/* <GithubIcon /> */}
+          <div className={style.icon}>
+            <Github />
+          </div>
         </div>
       </div>
     </div>
@@ -44,7 +48,6 @@ const style = applyStyle({
   },
   titleContainer: {
     display: "flex",
-    alignItems: "center",
   },
   title: {
     fontSize: 20,
@@ -66,6 +69,14 @@ const style = applyStyle({
     fontSize: 14,
     ":hover": {
       color: colors[4],
+      cursor: "pointer",
+    },
+  },
+  icon: {
+    margin: "10px 5px",
+    padding: 8,
+    borderRadius: 8,
+    ":hover": {
       cursor: "pointer",
     },
   },

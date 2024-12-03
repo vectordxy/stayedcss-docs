@@ -14,7 +14,6 @@ export default function Intro() {
       </div>
       <div className={style.buttonContainer}>
         <div className={style.startButton}>Get Started</div>
-        <div className={style.playGroundButton}>PlayGround</div>
       </div>
     </div>
   );
@@ -42,27 +41,12 @@ const style = applyStyle({
     display: "flex",
   },
   startButton: {
-    backgroundColor: "black",
     padding: "18px 20px",
-    color: colors[0],
-    borderRadius: 10,
-    margin: "0 16px",
-    fontSize: 14,
-    boxShadow:
-      "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-    transition: "background-color 0.3s ease-in-out",
-    ":hover": {
-      backgroundColor: colors[6],
-      cursor: "pointer",
-    },
-  },
-  playGroundButton: {
-    padding: "18px 20px",
-    backgroundColor: colors[0],
+    backgroundColor: colors[2],
     boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
     borderRadius: 10,
     fontSize: 14,
-    transition: "background-color 0.3s ease-in-out",
+    transition: "background-color 0.2s ease-in-out",
     ":hover": {
       backgroundColor: colors[1],
       cursor: "pointer",
