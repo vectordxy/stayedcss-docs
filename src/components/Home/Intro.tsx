@@ -1,6 +1,6 @@
-import { colors } from "@/app/utils/constant";
-import { boldFont, lightFont } from "@/app/utils/fonts";
-import { applyStyle } from "@/app/utils/getModule";
+import { colors } from "@/src/utils/constant";
+import { boldFont, lightFont } from "@/src/utils/fonts";
+import { applyStyle } from "@/src/utils/getModule";
 
 export default function Intro() {
   return (

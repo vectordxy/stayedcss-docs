@@ -1,8 +1,8 @@
-import { boldFont } from "@/app/utils/fonts";
+import { boldFont } from "@/src/utils/fonts";
 import { colors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
 import DarkModeButton from "./DarkModeButton";
-import Github from "@/app/assets/svg/Github";
+import Github from "@/src/assets/svg/Github";
 import Link from "next/link";
 
 export default function NavBar() {

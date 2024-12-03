@@ -1,5 +1,5 @@
-import { colors } from "@/app/utils/constant";
-import { applyStyle } from "@/app/utils/getModule";
+import { colors } from "@/src/utils/constant";
+import { applyStyle } from "@/src/utils/getModule";
 
 export default function Footer() {
   return (

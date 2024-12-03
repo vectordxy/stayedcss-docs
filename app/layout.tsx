@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import "./globals.css";
-import NavBar from "./components/global/NavBar";
-import { regularFont } from "./utils/fonts";
-import Footer from "./components/global/Footer";
+import NavBar from "../src/components/global/NavBar";
+import { regularFont } from "../src/utils/fonts";
+import Footer from "../src/components/global/Footer";
 
 export const metadata: Metadata = {
   title: "stayedcss",

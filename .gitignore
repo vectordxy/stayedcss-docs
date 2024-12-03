@@ -39,6 +39,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-stylecache
 *.tgz
 stayedcss
+getModule.ts
+getClientModule.ts
