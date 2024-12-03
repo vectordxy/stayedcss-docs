@@ -1,17 +1,22 @@
+import { boldFont } from "@/app/utils/fonts";
 import { colors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
+import DarkModeButton from "./DarkModeButton";
 // import GithubIcon from "../../../assets/github.svg";
 export default function NavBar() {
   return (
-    <div className={styles.container}>
-      <div className={styles.box}>
-        <div>
-          <span className={styles.title}>{projectTitle}</span>
+    <div className={style.container}>
+      <div className={style.box}>
+        <div className={style.titleContainer}>
+          <div className={`${boldFont.className} ${style.title}`}>
+            {projectTitle}
+          </div>
+          <DarkModeButton />
           {/* <span className={styles.version}>v{projectVersion}</span> */}
         </div>
-        <div className={styles.leftItems}>
-          <div className={styles.leftItem}>Playground</div>
-          <div className={styles.leftItem}>Docs</div>
+        <div className={style.leftItems}>
+          <div className={style.leftItem}>Docs</div>
+          <div className={style.leftItem}>Playground</div>
           {/* <GithubIcon /> */}
         </div>
       </div>
@@ -19,7 +24,7 @@ export default function NavBar() {
   );
 }
 
-const styles = applyStyle({
+const style = applyStyle({
   componentId: "components/NavBar",
   container: {
     backgroundColor: "white",
@@ -35,6 +40,10 @@ const styles = applyStyle({
     padding: "0 36px",
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
+  },
+  titleContainer: {
+    display: "flex",
     alignItems: "center",
   },
   title: {

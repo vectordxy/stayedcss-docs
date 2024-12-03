@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import "./globals.css";
 import NavBar from "./components/global/NavBar";
+import { regularFont } from "./utils/fonts";
+import Footer from "./components/global/Footer";
 
 export const metadata: Metadata = {
   title: "stayedcss",
@@ -18,8 +20,11 @@ export default async function RootLayout({
   return (
     <html>
       <body className={mode}>
-        <NavBar />
-        {children}
+        <div className={regularFont.className}>
+          <NavBar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
