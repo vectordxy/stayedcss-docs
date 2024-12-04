@@ -1,32 +1,39 @@
-import Arrow from "@/src/assets/svg/Arrow";
 import { colors, grayColors, shadow } from "@/src/utils/constant";
-import { boldFont, lightFont, regularFont } from "@/src/utils/fonts";
+import { boldFont, lightFont } from "@/src/utils/fonts";
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import Link from "next/link";
 
-export default function Intro() {
+export default function Features() {
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
-        <div className={`${lightFont.className} ${style.subTitle}`}>
-          Designed by Apple In California” chronicles 20 years of Apple design
-          through 450 photographs of our products and the processes used to make
-          them. A visual history spanning iMac to Apple Pencil, complete with
-          descriptions of innovative materials and techniques, it captures every
-          detail with honesty and intention.
-          {/* The Modern CSS Library for Next.js. Static First, also Ready for
-          Dynamic. */}
+        <div className={style.leftBox}>
+          <div className={`${boldFont.className} ${style.title}`}>
+            The CSS Library for Next.js
+          </div>
+          <div className={`${lightFont.className} ${style.subTitle}`}>
+            <span className={`${boldFont.className}`}>
+              Static First, also Ready for Dynamic.
+            </span>{" "}
+            Easily combine static and dynamic styles for your needs. Make your
+            projects better with simple CSS tools.
+          </div>
+          <Link href="/docs" className={style.startButton}>
+            Get Started
+          </Link>
         </div>
-        <Link
-          href="/docs"
-          className={`${lightFont.className} ${style.startButton}`}
-        >
-          Get Started
-        </Link>
-      </div>
-      <div className={style.moreinfo}>
-        <Arrow />
+        <div className={style.rightBox}>
+          <div className="cube-wrapper">
+            <div className="cube">
+              <div className="face front">Front</div>
+              <div className="face back">Back</div>
+              <div className="face left">Left</div>
+              <div className="face right">Right</div>
+              <div className="face top">Top</div>
+              <div className="face bottom">Bottom</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -35,30 +42,31 @@ export default function Intro() {
 const style = applyStyle({
   componentId: "components/Home/Intro",
   container: {
-    minHeight: 800,
-    paddingTop: 30,
+    minHeight: 700,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    position: "relative",
   },
   box: {
-    width: 1000,
+    width: 1200,
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
   },
+  leftBox: {
+    width: "55%",
+  },
+  rightBox: {
+    width: "40%",
+  },
   title: {
-    fontSize: 100,
+    fontSize: 48,
   },
   subTitle: {
-    width: "80%",
-    margin: "32px 0 42px 0",
-    fontSize: 16,
+    margin: "27px 0 70px 0",
+    fontSize: 18,
     lineHeight: "1.5em",
-    textAlign: "center",
   },
   startButton: {
     padding: "18px 20px",
@@ -73,13 +81,8 @@ const style = applyStyle({
       color: "white",
     },
   },
-  moreinfo: {
-    marginTop: 60,
-    padding: 30,
-    animation: "bounce 1.5s ease-in-out infinite",
-    cursor: "pointer",
-  },
-  "@desktop": {
+
+  "@tablet": {
     box: {
       width: "100%",
     },

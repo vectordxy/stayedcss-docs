@@ -24,6 +24,7 @@ export const colors = [
 ];
 
 export const grayColors = [
+  "#fbfbfb",
   "#eeeeee",
   "#d5d5d5",
   "#bbbbbb",
@@ -34,3 +35,5 @@ export const grayColors = [
   "#3d3d3d",
   "#242424",
 ];
+
+export const shadow = "0px 2px 4px rgba(0, 0, 0, 0.1)";

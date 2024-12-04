@@ -1,9 +1,6 @@
 import { boldFont } from "@/src/utils/fonts";
 import { colors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
-import DarkModeButton from "./DarkModeButton";
-import Github from "@/src/assets/svg/Github";
-import Link from "next/link";
 
 export default function NavBar() {
   return (
@@ -13,18 +10,16 @@ export default function NavBar() {
           <div className={`${boldFont.className} ${style.title}`}>
             {projectTitle}
           </div>
-          {/* <DarkModeButton /> */}
         </div>
 
         <div className={style.leftItems}>
           <div className={style.leftItem}>Docs</div>
-          <div className={style.leftItem}>Playground</div>
           <a
             target="_blank"
             href="https://github.com/vectordxy/stayedcss"
-            className={style.icon}
+            className={style.leftItem}
           >
-            <Github />
+            Github
           </a>
         </div>
       </div>
@@ -55,26 +50,20 @@ const style = applyStyle({
     alignItems: "center",
   },
   title: {
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: 500,
   },
   leftItems: {
     display: "flex",
+    fontSize: 12,
   },
   leftItem: {
     margin: 10,
     padding: 10,
-    fontSize: 14,
+    textDecoration: "none",
+    color: "black",
     ":hover": {
       color: colors[6],
-      cursor: "pointer",
-    },
-  },
-  icon: {
-    margin: "10px 5px",
-    padding: 8,
-    borderRadius: 8,
-    ":hover": {
       cursor: "pointer",
     },
   },
