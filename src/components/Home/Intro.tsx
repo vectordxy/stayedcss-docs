@@ -55,6 +55,7 @@ const style = applyStyle({
     cursor: "pointer",
     textDecoration: "none",
     border: "solid 1px black",
+    borderRadius: 2,
     color: "black",
     ":hover": {
       backgroundColor: "black",

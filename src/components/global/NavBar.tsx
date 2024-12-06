@@ -1,5 +1,5 @@
 import { boldFont, lightFont } from "@/src/utils/fonts";
-import { colors, projectTitle } from "../../utils/constant";
+import { colors, grayColors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ const style = applyStyle({
     height: 70,
     display: "flex",
     alignItems: "center",
-    borderBottom: "solid 1px black",
+    // borderBottom: `solid 1px ${grayColors[5]}`,
   },
   box: {
     width: "100%",

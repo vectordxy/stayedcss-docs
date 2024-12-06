@@ -1,4 +1,4 @@
-import { colors } from "@/src/utils/constant";
+import { colors, grayColors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 
@@ -10,7 +10,7 @@ export default function SideMenu() {
           Getting Started
         </div>
         <div className={style.content}>Introduction</div>
-        <div className={style.content}>Features</div>
+        <div className={style.content}>Installation</div>
       </div>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>
@@ -29,12 +29,13 @@ export default function SideMenu() {
 const style = applyStyle({
   componentId: "components/Docs/SideMenu",
   container: {
-    paddingTop: 90,
-    width: 270,
+    width: 250,
     height: "100vh",
     position: "fixed",
     fontSize: 14,
-    borderRight: "solid 1px black",
+    paddingTop: 21,
+    borderTop: `solid 1px ${grayColors[5]}`,
+    borderRight: `solid 1px ${grayColors[5]}`,
   },
   box: {
     padding: "6px 32px",

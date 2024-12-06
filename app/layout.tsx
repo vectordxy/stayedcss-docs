@@ -19,6 +19,12 @@ export default async function RootLayout({
 
   return (
     <html>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css"
+        />
+      </head>
       <body className={mode}>
         <div className={regularFont.className}>
           <NavBar />

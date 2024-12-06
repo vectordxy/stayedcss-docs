@@ -1,26 +1,18 @@
 @import "../stayedcss/index.css";
 
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
   padding: 0;
   margin: 0;
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-in-out;
-  }
-  50% {
-    transform: translateY(-10px);
-    animation-timing-function: ease-in-out;
-  }
+pre {
+  line-height: 1.8em;
+}
+
+code {
+  font-family: "Noto Sans";
+  font-size: 0.8em;
+  border-radius: 2px;
 }

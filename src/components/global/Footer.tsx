@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <ModeButton />
+        {/* <ModeButton /> */}
         Copyright 2024. vectordxy All Rights Reserved.
       </div>
     </div>
@@ -17,12 +17,12 @@ const style = applyStyle({
   componentId: "component/global/Footer",
   container: {
     width: "100%",
-    height: 200,
+    height: 100,
     display: "flex",
     justifyContent: "center",
   },
   box: {
-    width: "90%",
+    width: "30%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -30,6 +30,6 @@ const style = applyStyle({
     fontSize: 12,
     padding: "50px 0",
     color: grayColors[5],
-    borderTop: `solid 1px ${grayColors[3]}`,
+    // borderTop: `solid 1px ${grayColors[5]}`,
   },
 });
