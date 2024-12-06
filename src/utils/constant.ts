@@ -36,4 +36,14 @@ export const grayColors = [
   "#242424",
 ];
 
+export const deepGreenColors = [
+  { name: "Sea Green", hex: "#2e8b57" },
+  { name: "Pine Green", hex: "#01796f" },
+
+  { name: "Teal", hex: "#008080" },
+  { name: "Bottle Green", hex: "#006a4e" },
+];
+
+console.log(deepGreenColors);
+
 export const shadow = "0px 2px 4px rgba(0, 0, 0, 0.1)";

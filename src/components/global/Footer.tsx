@@ -22,14 +22,14 @@ const style = applyStyle({
     justifyContent: "center",
   },
   box: {
-    width: "95%",
+    width: "90%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: 14,
+    fontSize: 12,
     padding: "50px 0",
-    // color: grayColors[5],
-    borderTop: `solid 1px black`,
+    color: grayColors[5],
+    borderTop: `solid 1px ${grayColors[3]}`,
   },
 });

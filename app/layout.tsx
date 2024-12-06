@@ -23,7 +23,7 @@ export default async function RootLayout({
         <div className={regularFont.className}>
           <NavBar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>

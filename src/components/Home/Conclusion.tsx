@@ -1,30 +1,23 @@
 import { boldFont, lightFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
-import Link from "next/link";
-import { text } from "./dummydata";
 
-export default function Intro() {
+export default function ConClusion() {
   return (
     <div className={style.container}>
       <div className={style.box}>
-        <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
-        <div className={`${lightFont.className} ${style.subTitle}`}>{text}</div>
-        <Link
-          href="/docs"
-          className={`${lightFont.className} ${style.startButton}`}
-        >
-          Get Started
-        </Link>
+        <div className={`${boldFont.className} ${style.title}`}>
+          Like it? Try it.
+        </div>
       </div>
     </div>
   );
 }
 
 const style = applyStyle({
-  componentId: "components/Home/Intro",
+  componentId: "components/Home/Features",
   container: {
-    height: "100vh",
-    paddingTop: 10,
+    // minHeight: 800,
+    paddingTop: 30,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -33,20 +26,23 @@ const style = applyStyle({
   },
   box: {
     width: 1000,
+    minHeight: 600,
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "space-between",
+    // alignItems: "center",
   },
   title: {
-    fontSize: 80,
+    fontSize: 48,
+    width: "48%",
+  },
+  underline: {
+    textDecoration: "none",
   },
   subTitle: {
-    width: "80%",
-    margin: "32px 0 42px 0",
-    fontSize: 16,
+    width: "42%",
+    fontSize: 18,
     lineHeight: "1.5em",
-    textAlign: "center",
+    // textAlign: "center",
   },
   startButton: {
     padding: "18px 20px",
@@ -61,18 +57,25 @@ const style = applyStyle({
       color: "white",
     },
   },
+  moreinfo: {
+    marginTop: 60,
+    padding: 30,
+    animation: "bounce 1.5s ease-in-out infinite",
+    cursor: "pointer",
+  },
   "@desktop": {
     box: {
       width: "100%",
     },
     title: {
-      fontSize: 60,
+      width: "80%",
+      fontSize: 42,
     },
     subTitle: {
-      fontSize: 14,
-    },
-    startButton: {
-      fontSize: 12,
+      width: "80%",
+      margin: "27px 0 70px 0",
+      fontSize: 16,
+      lineHeight: "1.5em",
     },
   },
 });
