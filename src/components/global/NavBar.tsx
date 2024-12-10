@@ -1,9 +1,9 @@
 import { boldFont, lightFont } from "@/src/utils/fonts";
 import { colors, grayColors, projectTitle } from "../../utils/constant";
-import { applyStyle } from "../../utils/getModule";
+import { applyDarkStyle, applyStyle } from "../../utils/getModule";
 import Link from "next/link";
 import Github from "@/src/assets/svg/Github";
-import { LightMode } from "@/src/assets/svg/Mode";
+import ModeButton from "./ModeButton";
 
 export default function NavBar() {
   return (
@@ -19,7 +19,7 @@ export default function NavBar() {
           <Link href="/docs/introduction" className={style.leftItem}>
             Docs
           </Link>
-          <LightMode size={20} />
+          <ModeButton />
           <a
             target="_blank"
             href="https://github.com/vectordxy/stayedcss"
@@ -44,7 +44,6 @@ const style = applyStyle({
     height: 70,
     display: "flex",
     alignItems: "center",
-    // borderBottom: `solid 1px ${grayColors[5]}`,
   },
   box: {
     width: "100%",
@@ -60,7 +59,6 @@ const style = applyStyle({
   title: {
     fontSize: 17,
     textDecoration: "none",
-    color: "black",
   },
   beta: {
     fontSize: 12,
@@ -77,10 +75,22 @@ const style = applyStyle({
     margin: 10,
     padding: 10,
     textDecoration: "none",
-    color: "black",
     ":hover": {
       color: colors[6],
       cursor: "pointer",
     },
+  },
+});
+
+applyDarkStyle({
+  componentId: "components/Global/NavBar",
+  container: {
+    backgroundColor: grayColors[10],
+  },
+  title: {
+    color: colors[1],
+  },
+  leftItem: {
+    color: colors[1],
   },
 });

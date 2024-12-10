@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { colors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
-import { stayedClientStyle } from "../../../node_modules/stayedcss/src/client";
+import { applyClientStyle } from "@/src/utils/getClientModule";
+import { applyDarkStyle } from "@/src/utils/getModule";
 
 const gettingStarted = ["Introduction", "Installation"];
 const setUp = ["Server Components", "Client Components"];
@@ -100,7 +101,7 @@ function LinkItem({
   );
 }
 
-const style = stayedClientStyle({
+const style = applyClientStyle({
   componentId: "components/Docs/SideMenu",
   container: {
     width: 300,
@@ -130,5 +131,12 @@ const style = stayedClientStyle({
     cursor: "pointer",
     textDecoration: "underline",
     color: colors[5],
+  },
+});
+
+applyDarkStyle({
+  componentId: "components/Docs/SideMenu",
+  content: {
+    color: colors[1],
   },
 });

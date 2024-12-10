@@ -1,5 +1,5 @@
 import { boldFont, lightFont } from "@/src/utils/fonts";
-import { applyStyle } from "@/src/utils/getModule";
+import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import Link from "next/link";
 import { text } from "./dummydata";
 import { grayColors } from "@/src/utils/constant";
@@ -32,7 +32,7 @@ const style = applyStyle({
     position: "relative",
   },
   box: {
-    width: 1200,
+    width: 1082,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -81,5 +81,12 @@ const style = applyStyle({
     startButton: {
       fontSize: 11,
     },
+  },
+});
+
+applyDarkStyle({
+  componentId: "components/Home/Intro",
+  container: {
+    backgroundColor: grayColors[10],
   },
 });

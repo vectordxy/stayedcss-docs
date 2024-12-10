@@ -6,27 +6,25 @@ import { grayColors } from "@/src/utils/constant";
 
 export default function ModeButton() {
   return (
-    <div>
-      <div className={style.container}>
-        <div className={style.buttonContainer}>
-          <button className={style.button} onClick={() => changeMode("light")}>
-            <LightMode size={18} />
-          </button>
-          <button className={style.button} onClick={() => changeMode("dark")}>
-            <DarkMode size={18} />
-          </button>
-        </div>
+    <div className={style.container}>
+      <div className={style.buttonContainer}>
+        <button className={style.button} onClick={() => changeMode("light")}>
+          <LightMode size={18} />
+        </button>
+        <button className={style.button} onClick={() => changeMode("dark")}>
+          <DarkMode size={18} />
+        </button>
       </div>
     </div>
   );
 }
 
 const style = applyClientStyle({
-  componentId: "components/global/DarkModeButton",
+  componentId: "components/global/ModeButton",
   container: {
     display: "flex",
     alignItems: "center",
-    gap: "10px", // 버튼 간격 추가
+    // gap: "10px",
   },
   buttonContainer: {
     display: "flex",

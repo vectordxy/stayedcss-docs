@@ -1,11 +1,10 @@
 import SideMenu from "@/src/components/docs/SideMenu";
 import { applyStyle } from "@/src/utils/getModule";
-import { ReactNode } from "react";
 
 export default async function DocsLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <div className={style.container}>
