@@ -21,11 +21,21 @@ export default function SideMenu() {
         <div className={`${boldFont.className} ${style.title}`}>
           Documentation
         </div>
-        <div className={style.content}>Basic</div>
-        <div className={style.content}>Pseudo</div>
-        <div className={style.content}>Media Query</div>
-        <div className={style.content}>Keyframes</div>
-        <div className={style.content}>Dark Mode</div>
+        <Link href="/docs/basic" className={style.content}>
+          Basic
+        </Link>
+        <Link href="/docs/pseudo" className={style.content}>
+          Pseudo
+        </Link>
+        <Link href="/docs/media-query" className={style.content}>
+          Media Query
+        </Link>
+        <Link href="/docs/keyframes" className={style.content}>
+          Keyframes
+        </Link>
+        <Link href="/docs/dark-mode" className={style.content}>
+          Dark Mode
+        </Link>
       </div>
     </div>
   );

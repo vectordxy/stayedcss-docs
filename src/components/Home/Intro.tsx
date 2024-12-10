@@ -2,7 +2,7 @@ import { boldFont, lightFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 import Link from "next/link";
 import { text } from "./dummydata";
-import { grayColors, shadow } from "@/src/utils/constant";
+import { grayColors } from "@/src/utils/constant";
 
 export default function Intro() {
   return (
@@ -11,7 +11,7 @@ export default function Intro() {
         <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
         <div className={`${lightFont.className} ${style.subTitle}`}>{text}</div>
         <Link
-          href="/docs"
+          href="/docs/introduction"
           className={`${lightFont.className} ${style.startButton}`}
         >
           Get Started
@@ -32,7 +32,7 @@ const style = applyStyle({
     position: "relative",
   },
   box: {
-    width: 1000,
+    width: 1200,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
