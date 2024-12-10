@@ -29,16 +29,15 @@ export default function SideMenu() {
 const style = applyStyle({
   componentId: "components/Docs/SideMenu",
   container: {
-    width: 250,
-    height: "100vh",
-    position: "fixed",
+    width: 230,
+    position: "sticky",
+    top: "70px",
     fontSize: 14,
-    paddingTop: 21,
-    borderTop: `solid 1px ${grayColors[5]}`,
-    borderRight: `solid 1px ${grayColors[5]}`,
+    padding: "16px 0",
+    // backgroundColor: "blue",
   },
   box: {
-    padding: "6px 32px",
+    padding: "6px 27px",
   },
   title: {
     margin: "8px 0",

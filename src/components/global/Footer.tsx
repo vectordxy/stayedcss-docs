@@ -22,7 +22,7 @@ const style = applyStyle({
     justifyContent: "center",
   },
   box: {
-    width: "30%",
+    // width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

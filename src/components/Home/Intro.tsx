@@ -2,6 +2,7 @@ import { boldFont, lightFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 import Link from "next/link";
 import { text } from "./dummydata";
+import { grayColors, shadow } from "@/src/utils/constant";
 
 export default function Intro() {
   return (
@@ -24,7 +25,6 @@ const style = applyStyle({
   componentId: "components/Home/Intro",
   container: {
     height: "100vh",
-    paddingTop: 10,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -50,16 +50,17 @@ const style = applyStyle({
   },
   startButton: {
     padding: "18px 20px",
-    fontSize: 14,
+    fontSize: 12,
     transition: "background-color 0.2s ease-in-out",
     cursor: "pointer",
     textDecoration: "none",
-    border: "solid 1px black",
-    borderRadius: 2,
-    color: "black",
+    borderRadius: 3,
+    // boxShadow: shadow,
+    backgroundColor: "black",
+    color: "white",
     ":hover": {
-      backgroundColor: "black",
-      color: "white",
+      backgroundColor: grayColors[7],
+      // color: "white",
     },
   },
   "@desktop": {
