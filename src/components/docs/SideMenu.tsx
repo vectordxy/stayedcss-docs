@@ -1,6 +1,7 @@
 import { colors, grayColors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
+import Link from "next/link";
 
 export default function SideMenu() {
   return (
@@ -9,8 +10,12 @@ export default function SideMenu() {
         <div className={`${boldFont.className} ${style.title}`}>
           Getting Started
         </div>
-        <div className={style.content}>Introduction</div>
-        <div className={style.content}>Installation</div>
+        <Link href="/docs/introduction" className={style.content}>
+          Introduction
+        </Link>
+        <Link href="/docs/installation" className={style.content}>
+          Installation
+        </Link>
       </div>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>
@@ -29,12 +34,12 @@ export default function SideMenu() {
 const style = applyStyle({
   componentId: "components/Docs/SideMenu",
   container: {
-    width: 270,
+    width: 300,
     position: "sticky",
     top: "70px",
     fontSize: 14,
     padding: "16px 0",
-    // backgroundColor: "blue",
+    height: 200,
   },
   box: {
     padding: "6px 27px",
@@ -44,6 +49,7 @@ const style = applyStyle({
   },
   content: {
     padding: 6,
+    display: "block",
     cursor: "pointer",
     ":hover": {
       color: colors[4],
