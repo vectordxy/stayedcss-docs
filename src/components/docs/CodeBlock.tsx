@@ -1,23 +1,26 @@
-"use client";
-import React, { useEffect } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css"; // 원하는 테마
+import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-interface Props {
-  code: string;
-  language: string;
-}
-
-const CodeBlock = ({ code, language }: Props) => {
-  useEffect(() => {
-    hljs.highlightAll();
-  }, []);
+export default function CodeBlock() {
+  const code = `
+  const add = (a, b) => {
+    return a + b;
+  };
+  `;
 
   return (
-    <pre>
-      <code className={language}>{code}</code>
-    </pre>
+    <SyntaxHighlighter
+      language="typescript"
+      style={materialDark}
+      customStyle={{
+        padding: "9px 15px",
+        fontSize: 14,
+        borderRadius: 2,
+        lineHeight: "1.25em",
+        // fontFamily: "'Noto Sans'",
+      }}
+    >
+      {code}
+    </SyntaxHighlighter>
   );
-};
-
-export default CodeBlock;
+}

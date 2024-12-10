@@ -1,9 +1,8 @@
+import Link from "next/link";
 import { boldFont, lightFont } from "@/src/utils/fonts";
+import ModeButton from "./ModeButton";
 import { colors, grayColors, projectTitle } from "../../utils/constant";
 import { applyDarkStyle, applyStyle } from "../../utils/getModule";
-import Link from "next/link";
-import Github from "@/src/assets/svg/Github";
-import ModeButton from "./ModeButton";
 
 export default function NavBar() {
   return (
@@ -17,7 +16,10 @@ export default function NavBar() {
           <ModeButton />
         </div>
         <div className={style.leftItems}>
-          <Link href="/docs/introduction" className={style.leftItem}>
+          <Link
+            href="/docs/getting-started/introduction"
+            className={style.leftItem}
+          >
             Docs
           </Link>
 
@@ -26,7 +28,7 @@ export default function NavBar() {
             href="https://github.com/vectordxy/stayedcss"
             className={style.leftItem}
           >
-            <Github />
+            Github
           </a>
         </div>
       </div>
@@ -88,7 +90,7 @@ applyDarkStyle({
     backgroundColor: grayColors[10],
   },
   title: {
-    color: colors[1],
+    color: grayColors[2],
   },
   leftItem: {
     color: grayColors[2],
