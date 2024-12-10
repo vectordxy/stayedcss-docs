@@ -1,13 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { colors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
 import { stayedClientStyle } from "../../../node_modules/stayedcss/src/client";
-import { useParams, usePathname } from "next/navigation";
+
+const gettingStarted = ["Introduction", "Installation"];
+const setUp = ["Server Components", "Client Components"];
+const styles = ["Basic", "Pseudo", "Media Query", "Dark Mode"];
+const contribution = ["Guide"];
+
+const makeLowerCase = (str: string) => {
+  return str.toLowerCase().replaceAll(" ", "-");
+};
 
 export default function SideMenu() {
-  const p = usePathname();
+  const pathname = usePathname().split("/");
+  const [currentPathname, setCurrentPathname] = useState("");
+
+  useEffect(() => {
+    setCurrentPathname(pathname[pathname.length - 1]);
+  }, [pathname]);
 
   return (
     <div className={style.container}>
@@ -15,52 +30,73 @@ export default function SideMenu() {
         <div className={`${boldFont.className} ${style.title}`}>
           Getting Started
         </div>
-        <Link
-          href="/docs/getting-started/introduction"
-          className={style.content}
-        >
-          Introduction
-        </Link>
-        <Link
-          href="/docs/getting-started/installation"
-          className={style.content}
-        >
-          Installation
-        </Link>
+        {gettingStarted.map((item, index) => (
+          <LinkItem
+            category="getting-started"
+            name={item}
+            currentPathname={currentPathname}
+            key={index}
+          />
+        ))}
       </div>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>Set Up</div>
-        <Link href="/docs/set-up/server-components" className={style.content}>
-          Server Components
-        </Link>
-        <Link href="/docs/set-up/client-components" className={style.content}>
-          Client Components
-        </Link>
+        {setUp.map((item, index) => (
+          <LinkItem
+            category="set-up"
+            name={item}
+            currentPathname={currentPathname}
+            key={index}
+          />
+        ))}
       </div>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>Styles</div>
-        <Link href="/docs/styles/basic" className={style.content}>
-          Basic
-        </Link>
-        <Link href="/docs/styles/pseudo" className={style.content}>
-          Pseudo
-        </Link>
-        <Link href="/docs/styles/media-query" className={style.content}>
-          Media Query
-        </Link>
-        <Link href="/docs/styles/dark-mode" className={style.content}>
-          Dark Mode
-        </Link>
+        {styles.map((item, index) => (
+          <LinkItem
+            category="styles"
+            name={item}
+            currentPathname={currentPathname}
+            key={index}
+          />
+        ))}
       </div>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>
           Contribution
         </div>
-        <Link href="/docs/contribution/guide" className={style.content}>
-          Guide
-        </Link>
+        {contribution.map((item, index) => (
+          <LinkItem
+            category="contribution"
+            name={item}
+            currentPathname={currentPathname}
+            key={index}
+          />
+        ))}
       </div>
     </div>
+  );
+}
+
+function LinkItem({
+  category,
+  name,
+  currentPathname,
+}: {
+  category: string;
+  name: string;
+  currentPathname: string;
+}) {
+  const currentName = makeLowerCase(name);
+  return (
+    <Link
+      href={`/docs/${category}/${currentName}`}
+      className={
+        currentPathname === currentName ? style.selectedContent : style.content
+      }
+    >
+      {name}
+    </Link>
   );
 }
 
@@ -73,7 +109,6 @@ const style = stayedClientStyle({
     fontSize: 14,
     padding: "16px 0",
     height: 400,
-    // backgroundColor: "blue",
   },
   box: {
     padding: "6px 27px",
@@ -86,7 +121,14 @@ const style = stayedClientStyle({
     display: "block",
     cursor: "pointer",
     ":hover": {
-      color: colors[4],
+      color: colors[5],
     },
+  },
+  selectedContent: {
+    padding: "6px 3px",
+    display: "block",
+    cursor: "pointer",
+    textDecoration: "underline",
+    color: colors[5],
   },
 });

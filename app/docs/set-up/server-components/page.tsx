@@ -1,5 +1,14 @@
-import React from "react";
+import Section from "@/src/components/docs/Section";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <>
+      <Section title="Server Components">
+        <div></div>
+      </Section>
+      <Section title="Main Features">
+        <div></div>
+      </Section>
+    </>
+  );
 }
