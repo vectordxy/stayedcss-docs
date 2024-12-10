@@ -2,6 +2,8 @@ import { boldFont, lightFont } from "@/src/utils/fonts";
 import { colors, grayColors, projectTitle } from "../../utils/constant";
 import { applyStyle } from "../../utils/getModule";
 import Link from "next/link";
+import Github from "@/src/assets/svg/Github";
+import { LightMode } from "@/src/assets/svg/Mode";
 
 export default function NavBar() {
   return (
@@ -14,15 +16,16 @@ export default function NavBar() {
           <div className={`${lightFont.className} ${style.beta}`}>beta</div>
         </div>
         <div className={style.leftItems}>
-          <Link href="/docs" className={style.leftItem}>
+          <Link href="/docs/introduction" className={style.leftItem}>
             Docs
           </Link>
+          <LightMode size={20} />
           <a
             target="_blank"
             href="https://github.com/vectordxy/stayedcss"
             className={style.leftItem}
           >
-            Github
+            <Github />
           </a>
         </div>
       </div>
@@ -67,6 +70,7 @@ const style = applyStyle({
   },
   leftItems: {
     display: "flex",
+    alignItems: "center",
     fontSize: 12,
   },
   leftItem: {

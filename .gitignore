@@ -42,5 +42,4 @@ next-env.d.ts
 *.tgz
 stayedcss
 getModule.ts
-getClientModule.ts
 dummydata.ts

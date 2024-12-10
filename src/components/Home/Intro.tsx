@@ -73,8 +73,13 @@ const style = applyStyle({
     subTitle: {
       fontSize: 14,
     },
+  },
+  "@laptop": {
+    title: {
+      fontSize: 46,
+    },
     startButton: {
-      fontSize: 12,
+      fontSize: 11,
     },
   },
 });

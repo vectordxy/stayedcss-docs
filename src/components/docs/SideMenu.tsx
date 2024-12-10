@@ -1,9 +1,38 @@
-import { colors, grayColors } from "@/src/utils/constant";
+"use client";
+
+import { colors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
-import { applyStyle } from "@/src/utils/getModule";
+import { applyClientStyle } from "@/src/utils/getClientModule";
 import Link from "next/link";
 
 export default function SideMenu() {
+  const style = applyClientStyle({
+    componentId: "components/Docs/SideMenu",
+    container: {
+      width: 300,
+      position: "sticky",
+      top: "70px",
+      fontSize: 14,
+      padding: "16px 0",
+      height: 400,
+      // backgroundColor: "blue",
+    },
+    box: {
+      padding: "6px 27px",
+    },
+    title: {
+      margin: "8px 0",
+    },
+    content: {
+      padding: "6px 3px",
+      display: "block",
+      cursor: "pointer",
+      ":hover": {
+        color: colors[4],
+      },
+    },
+  });
+
   return (
     <div className={style.container}>
       <div className={style.box}>
@@ -18,9 +47,7 @@ export default function SideMenu() {
         </Link>
       </div>
       <div className={style.box}>
-        <div className={`${boldFont.className} ${style.title}`}>
-          Documentation
-        </div>
+        <div className={`${boldFont.className} ${style.title}`}>Styles</div>
         <Link href="/docs/basic" className={style.content}>
           Basic
         </Link>
@@ -37,32 +64,38 @@ export default function SideMenu() {
           Dark Mode
         </Link>
       </div>
+      <div className={style.box}>
+        <div className={`${boldFont.className} ${style.title}`}>Cummunity</div>
+        <Link href="/docs/basic" className={style.content}>
+          Contribution
+        </Link>
+      </div>
     </div>
   );
 }
 
-const style = applyStyle({
-  componentId: "components/Docs/SideMenu",
-  container: {
-    width: 300,
-    position: "sticky",
-    top: "70px",
-    fontSize: 14,
-    padding: "16px 0",
-    height: 200,
-  },
-  box: {
-    padding: "6px 27px",
-  },
-  title: {
-    margin: "8px 0",
-  },
-  content: {
-    padding: 6,
-    display: "block",
-    cursor: "pointer",
-    ":hover": {
-      color: colors[4],
-    },
-  },
-});
+// const style = applyClientStyle({
+//   componentId: "components/Docs/SideMenu",
+//   container: {
+//     width: 300,
+//     position: "sticky",
+//     top: "70px",
+//     fontSize: 14,
+//     padding: "16px 0",
+//     height: 200,
+//   },
+//   box: {
+//     padding: "6px 27px",
+//   },
+//   title: {
+//     margin: "8px 0",
+//   },
+//   content: {
+//     padding: "6px 3px",
+//     display: "block",
+//     cursor: "pointer",
+//     ":hover": {
+//       color: colors[4],
+//     },
+//   },
+// });

@@ -8,9 +8,11 @@ export default async function DocsLayout({
   children: ReactNode;
 }) {
   return (
-    <div className={style.acontainer}>
+    <div className={style.container}>
       <div className={style.box}>
-        <SideMenu />
+        <div className={style.sidemenu}>
+          <SideMenu />
+        </div>
         <div className={style.layout}>
           <div className={style.frame}>{children}</div>
         </div>
@@ -21,7 +23,7 @@ export default async function DocsLayout({
 
 const style = applyStyle({
   componentId: "components/Docs/Layout",
-  acontainer: {
+  container: {
     display: "flex",
     justifyContent: "center",
     position: "relative",
@@ -30,6 +32,9 @@ const style = applyStyle({
     width: 1200,
     display: "flex",
     paddingTop: 70,
+  },
+  sidemenu: {
+    display: "inline-block",
   },
   layout: {
     width: "100%",
@@ -40,5 +45,22 @@ const style = applyStyle({
   frame: {
     lineHeight: "1.5em",
     minWidth: 900,
+  },
+  "@desktop": {
+    box: {
+      width: "100%",
+    },
+    frame: {
+      lineHeight: "1.5em",
+      minWidth: "100%",
+    },
+  },
+  "@laptop": {
+    box: {
+      padding: "70px 32px",
+    },
+    sidemenu: {
+      display: "none",
+    },
   },
 });
