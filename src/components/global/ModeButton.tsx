@@ -1,7 +1,11 @@
 "use client";
 
 import { DarkMode, LightMode } from "@/src/assets/svg/Mode";
-import { applyClientStyle, changeMode } from "../../utils/getClientModule";
+import {
+  applyClientDarkStyle,
+  applyClientStyle,
+  changeMode,
+} from "../../utils/getClientModule";
 import { grayColors } from "@/src/utils/constant";
 
 export default function ModeButton() {
@@ -9,10 +13,10 @@ export default function ModeButton() {
     <div className={style.container}>
       <div className={style.buttonContainer}>
         <button className={style.button} onClick={() => changeMode("light")}>
-          <LightMode size={18} />
+          <LightMode size={15} />
         </button>
         <button className={style.button} onClick={() => changeMode("dark")}>
-          <DarkMode size={18} />
+          <DarkMode size={15} />
         </button>
       </div>
     </div>
@@ -24,15 +28,14 @@ const style = applyClientStyle({
   container: {
     display: "flex",
     alignItems: "center",
-    // gap: "10px",
   },
   buttonContainer: {
     display: "flex",
     margin: "0 10px",
-    backgroundColor: grayColors[0],
   },
   button: {
-    padding: 6,
+    padding: 4,
+    margin: 3,
     borderRadius: 15,
     border: "none",
     cursor: "pointer",
@@ -41,8 +44,17 @@ const style = applyClientStyle({
     alignItems: "center",
     justifyContent: "center",
     ":hover": {
-      backgroundColor: "#ddd",
-      borderColor: "#aaa",
+      backgroundColor: grayColors[2],
+    },
+  },
+});
+
+applyClientDarkStyle({
+  componentId: "components/global/ModeButton",
+  button: {
+    backgroundColor: grayColors[8],
+    ":hover": {
+      backgroundColor: grayColors[6],
     },
   },
 });

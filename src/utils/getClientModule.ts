@@ -1,4 +1,5 @@
 import {
+  stayedClientDarkStyle,
   stayedClientStyle,
   changeScreenMode,
   saveScreenMode,
@@ -14,4 +15,8 @@ export const changeMode = (mode: "light" | "dark") => {
 
 export const applyClientStyle = (input: any) => {
   return stayedClientStyle(input);
+};
+
+export const applyClientDarkStyle = (input: any) => {
+  return stayedClientDarkStyle(input);
 };

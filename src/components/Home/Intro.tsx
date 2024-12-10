@@ -55,12 +55,10 @@ const style = applyStyle({
     cursor: "pointer",
     textDecoration: "none",
     borderRadius: 3,
-    // boxShadow: shadow,
     backgroundColor: "black",
     color: "white",
     ":hover": {
       backgroundColor: grayColors[7],
-      // color: "white",
     },
   },
   "@desktop": {
@@ -88,5 +86,11 @@ applyDarkStyle({
   componentId: "components/Home/Intro",
   container: {
     backgroundColor: grayColors[10],
+  },
+  startButton: {
+    backgroundColor: grayColors[8],
+    ":hover": {
+      backgroundColor: grayColors[6],
+    },
   },
 });

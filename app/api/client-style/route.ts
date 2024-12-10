@@ -1,12 +1,20 @@
 import { NextResponse } from "next/server";
-import { stayedStyle } from "../../../node_modules/stayedcss/src";
+import {
+  stayedStyle,
+  stayedDarkStyle,
+} from "../../../node_modules/stayedcss/src";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    stayedStyle(body);
+    const { data, mode } = await request.json();
+    // console.log(data.componentId);
+    if (mode === "default") {
+      stayedStyle(data);
+    } else if (mode === "dark") {
+      stayedDarkStyle(data);
+    }
     return NextResponse.json({
-      data: body,
+      result: data,
     });
   } catch (error) {
     return NextResponse.json(

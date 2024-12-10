@@ -14,12 +14,13 @@ export default function NavBar() {
             {projectTitle}
           </Link>
           <div className={`${lightFont.className} ${style.beta}`}>beta</div>
+          <ModeButton />
         </div>
         <div className={style.leftItems}>
           <Link href="/docs/introduction" className={style.leftItem}>
             Docs
           </Link>
-          <ModeButton />
+
           <a
             target="_blank"
             href="https://github.com/vectordxy/stayedcss"
@@ -64,7 +65,6 @@ const style = applyStyle({
     fontSize: 12,
     margin: 6,
     paddingTop: 1,
-    // backgroundColor: grayColors[1],
   },
   leftItems: {
     display: "flex",
@@ -91,6 +91,6 @@ applyDarkStyle({
     color: colors[1],
   },
   leftItem: {
-    color: colors[1],
+    color: grayColors[2],
   },
 });

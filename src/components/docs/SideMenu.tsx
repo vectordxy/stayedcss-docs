@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { colors } from "@/src/utils/constant";
+import { colors, grayColors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
-import { applyClientStyle } from "@/src/utils/getClientModule";
-import { applyDarkStyle } from "@/src/utils/getModule";
+import {
+  applyClientDarkStyle,
+  applyClientStyle,
+} from "@/src/utils/getClientModule";
 
 const gettingStarted = ["Introduction", "Installation"];
 const setUp = ["Server Components", "Client Components"];
@@ -134,9 +136,9 @@ const style = applyClientStyle({
   },
 });
 
-applyDarkStyle({
+applyClientDarkStyle({
   componentId: "components/Docs/SideMenu",
   content: {
-    color: colors[1],
+    color: grayColors[2],
   },
 });
