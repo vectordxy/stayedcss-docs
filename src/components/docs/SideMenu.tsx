@@ -29,7 +29,7 @@ export default function SideMenu() {
 const style = applyStyle({
   componentId: "components/Docs/SideMenu",
   container: {
-    width: 230,
+    width: 270,
     position: "sticky",
     top: "70px",
     fontSize: 14,

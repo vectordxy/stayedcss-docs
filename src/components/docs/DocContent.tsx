@@ -1,4 +1,4 @@
-import { colors, grayColors } from "@/src/utils/constant";
+import { grayColors } from "@/src/utils/constant";
 import { boldFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 
@@ -6,42 +6,22 @@ export default function DocContent() {
   return (
     <div className={style.container}>
       <div className={style.contentContainer}>
+        <div className={style.subTitle}>Introduction</div>
         <Content title="What is stayedcss?" />
         <Content title="Main Features" />
-        {/* <Content /> */}
       </div>
-      <OnThisPage />
     </div>
   );
 }
 
 function Content({ title }: { title: string }) {
   return (
-    <div id={title.replaceAll(" ", "-")} className={style.section}>
-      <div className={style.subTitle}>Introduction</div>
+    <div id={title.replaceAll(" ", "-")}>
       <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.contentBox}>
         <div className={style.content}>
           The powerful and simple CSS library for Next.js.
         </div>
-      </div>
-    </div>
-  );
-}
-
-function OnThisPage() {
-  return (
-    <div className={style.category}>
-      <div className={`${boldFont.className} ${style.categoryTitle}`}>
-        On this page
-      </div>
-      <div className={style.categoryBox}>
-        <a href="#What-is-stayedcss" className={style.categoryItem}>
-          What is stayedcss?
-        </a>
-        <a href="#Main-Features" className={style.categoryItem}>
-          Main Features
-        </a>
       </div>
     </div>
   );
@@ -56,7 +36,7 @@ const style = applyStyle({
     color: grayColors[9],
     lineHeight: "1.5em",
     paddingTop: 70,
-    minWidth: 740,
+    minWidth: 900,
   },
   content: {
     marginTop: 32,
@@ -71,30 +51,5 @@ const style = applyStyle({
   },
   title: {
     fontSize: 32,
-  },
-  section: {
-    // paddingTop: 70,
-  },
-  category: {
-    display: "block",
-    fontSize: 14,
-    width: 230,
-    paddingTop: 70,
-  },
-  categoryBox: {
-    //
-  },
-  categoryTitle: {
-    padding: "6px 0",
-  },
-  categoryItem: {
-    display: "block",
-    textDecoration: "none",
-    color: "black",
-    padding: "6px 0",
-    cursor: "pointer",
-    ":hover": {
-      color: colors[4],
-    },
   },
 });

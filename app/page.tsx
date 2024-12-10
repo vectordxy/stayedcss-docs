@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Intro />
-      <Footer />
+      {/* <Footer /> */}
       {/* <Features />
       <ConClusion /> */}
     </div>
