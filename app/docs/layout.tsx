@@ -26,7 +26,6 @@ const style = applyStyle({
   container: {
     display: "flex",
     justifyContent: "center",
-    position: "relative",
   },
   box: {
     width: 1200,

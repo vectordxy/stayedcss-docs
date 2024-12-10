@@ -1,12 +1,10 @@
-import { colors, grayColors, shadow } from "@/src/utils/constant";
+import { grayColors } from "@/src/utils/constant";
 import { applyStyle } from "@/src/utils/getModule";
-import ModeButton from "./ModeButton";
 
 export default function Footer() {
   return (
     <div className={style.container}>
       <div className={style.box}>
-        {/* <ModeButton /> */}
         Copyright 2024. vectordxy All Rights Reserved.
       </div>
     </div>
@@ -14,7 +12,7 @@ export default function Footer() {
 }
 
 const style = applyStyle({
-  componentId: "component/global/Footer",
+  componentId: "component/global/footer",
   container: {
     width: "100%",
     height: 100,
@@ -22,7 +20,6 @@ const style = applyStyle({
     justifyContent: "center",
   },
   box: {
-    // width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -30,6 +27,5 @@ const style = applyStyle({
     fontSize: 12,
     padding: "50px 0",
     color: grayColors[5],
-    // borderTop: `solid 1px ${grayColors[5]}`,
   },
 });

@@ -11,7 +11,7 @@ export default function Intro() {
         <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
         <div className={`${lightFont.className} ${style.subTitle}`}>{text}</div>
         <Link
-          href="/docs/introduction"
+          href="/docs/getting-started/introduction"
           className={`${lightFont.className} ${style.startButton}`}
         >
           Get Started
