@@ -1,0 +1,4 @@
+.button-components-global-ModeButton:hover { background-color: #d5d5d5; } 
+.button-components-global-ModeButton { padding: 4px; margin: 3px; border-radius: 15px; border: none; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;  }
+.buttonContainer-components-global-ModeButton { display: flex; margin: 0 10px;  }
+.container-components-global-ModeButton { display: flex; align-items: center;  }

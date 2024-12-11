@@ -1,0 +1,8 @@
+.startButton-components-Home-Intro:hover { background-color: #565656; } 
+.startButton-components-Home-Intro { padding: 18px 20px; font-size: 12px; transition: background-color 0.2s ease-in-out; cursor: pointer; text-decoration: none; border-radius: 3px; background-color: black; color: white;  }
+.subTitle-components-Home-Intro { width: 80%; margin: 32px 0 42px 0; font-size: 16px; line-height: 1.5em; text-align: center;  }
+.title-components-Home-Intro { font-size: 80px;  }
+.box-components-Home-Intro { width: 1082px; display: flex; flex-direction: column; justify-content: center; align-items: center;  }
+.container-components-Home-Intro { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;  }
+@media (max-width: 1280px) { .box-components-Home-Intro { width: 100%;  } .title-components-Home-Intro { font-size: 60px;  } .subTitle-components-Home-Intro { font-size: 14px;  } } 
+@media (max-width: 1024px) { .title-components-Home-Intro { font-size: 46px;  } .startButton-components-Home-Intro { font-size: 11px;  } } 
