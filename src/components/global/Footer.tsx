@@ -1,4 +1,5 @@
 import { grayColors } from "@/src/utils/constant";
+import { applyClientDarkStyle } from "@/src/utils/getClientModule";
 import { applyStyle } from "@/src/utils/getModule";
 
 export default function Footer() {
@@ -18,7 +19,7 @@ const style = applyStyle({
     height: 200,
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "black",
+    backgroundColor: grayColors[11],
   },
   box: {
     display: "flex",
@@ -27,6 +28,6 @@ const style = applyStyle({
     alignItems: "center",
     fontSize: 12,
     padding: "50px 0",
-    color: grayColors[5],
+    color: grayColors[3],
   },
 });

@@ -4,7 +4,7 @@ import CodeBlock from "@/src/components/docs/CodeBlock";
 export default function page() {
   return (
     <Article title="Server Components">
-      <CodeBlock language="jsx" code={example} />
+      <CodeBlock language="jsx" copy={false} code={example} />
     </Article>
   );
 }

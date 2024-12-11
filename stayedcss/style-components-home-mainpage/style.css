@@ -1,5 +1,5 @@
 .startButton-components-home-mainpage:hover { background-color: #565656; } 
-.startButton-components-home-mainpage { padding: 18px 20px; font-size: 12px; transition: background-color 0.2s ease-in-out; cursor: pointer; text-decoration: none; border-radius: 3px; background-color: black; color: white;  }
+.startButton-components-home-mainpage { padding: 18px 20px; font-size: 12px; transition: background-color 0.2s ease-in-out; cursor: pointer; text-decoration: none; border-radius: 3px; background-color: #111111; color: white;  }
 .subTitle-components-home-mainpage { width: 80%; margin: 32px 0 42px 0; font-size: 16px; line-height: 1.5em; text-align: center;  }
 .title-components-home-mainpage { font-size: 80px;  }
 .box-components-home-mainpage { width: 1082px; display: flex; flex-direction: column; justify-content: center; align-items: center;  }

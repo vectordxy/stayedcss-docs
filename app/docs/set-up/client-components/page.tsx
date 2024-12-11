@@ -1,15 +1,28 @@
 import Article from "@/src/components/docs/Article";
 import CodeBlock from "@/src/components/docs/CodeBlock";
+import Section from "@/src/components/docs/Section";
 
 export default function page() {
   return (
     <Article title="Client Components">
-      <CodeBlock language="jsx" code={example} />
+      <Section title="1. Create app/api/client-style">
+        <CodeBlock language="jsx" copy={false} code={postExample} />
+      </Section>
+      <Section title="2. Use stayedcssClient in components">
+        <CodeBlock language="jsx" copy={false} code={componentExample} />
+      </Section>
     </Article>
   );
 }
 
-const example = `'use client'
+const postExample = `import { postStyles } from "stayedcss";
+
+export async function POST(request: Request) {
+  return await postStyles(request);
+}
+`;
+
+const componentExample = `'use client'
 
 import { stayedcssClient } from "stayedcss/client";
 

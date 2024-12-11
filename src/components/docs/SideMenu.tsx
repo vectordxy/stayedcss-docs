@@ -10,10 +10,17 @@ import {
   applyClientStyle,
 } from "@/src/utils/getClientModule";
 
-const gettingStarted = ["Introduction", "Preview Code", "Installation"];
+const gettingStarted = ["Introduction", "Installation"];
 const setUp = ["Server Components", "Client Components", "Types"];
-const styles = ["Basic", "Pseudo", "Media Query", "Dark Mode"];
-const community = ["Contribution", "Project Structure", "Development Plan"];
+const styles = [
+  "Basic Styles",
+  "Pseudo Classes",
+  "Pseudo Elements",
+  "Selectors",
+  "Media Query",
+  "Dark Mode",
+];
+const community = ["Preview Code", "Contribution", "Development Plan"];
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");
@@ -109,7 +116,7 @@ const style = applyClientStyle({
     top: "70px",
     fontSize: 14,
     padding: "16px 0",
-    height: 500,
+    height: 600,
   },
   box: {
     padding: "6px 27px",

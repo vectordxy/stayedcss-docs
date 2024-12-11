@@ -5,12 +5,16 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { applyClientStyle } from "@/src/utils/getClientModule";
 import { grayColors } from "@/src/utils/constant";
+import Copy from "@/src/assets/svg/Copy";
+import Check from "@/src/assets/svg/Check";
 
 export default function CodeBlock({
   language,
+  copy = true,
   code,
 }: {
   language: string;
+  copy?: boolean;
   code: string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -40,9 +44,11 @@ export default function CodeBlock({
       >
         {code}
       </SyntaxHighlighter>
-      <button className={style.button} onClick={handleCopy}>
-        {copied ? "copied!" : "copy"}
-      </button>
+      {copy && (
+        <div className={style.button} onClick={handleCopy}>
+          {copied ? <Check /> : <Copy />}
+        </div>
+      )}
     </div>
   );
 }
@@ -52,20 +58,11 @@ const style = applyClientStyle({
   container: {
     position: "relative",
   },
+
   button: {
     position: "absolute",
     top: "17px",
     right: "18px",
-    fontSize: 12,
-    borderRadius: 2,
-    padding: "3px 5px",
-    backgroundColor: grayColors[7],
-    transition: "background-color 0.3s ease-in-out",
-    color: grayColors[3],
-    border: "none",
     cursor: "pointer",
-    ":hover": {
-      backgroundColor: grayColors[6],
-    },
   },
 });

@@ -39,14 +39,14 @@ const style = applyStyle({
   componentId: "RootLayout",
   container: {
     color: grayColors[10],
-    backgroundColor: "white",
+    backgroundColor: grayColors[0],
   },
 });
 
 applyDarkStyle({
   componentId: "RootLayout",
   container: {
-    color: grayColors[2],
+    color: grayColors[3],
     backgroundColor: grayColors[10],
   },
 });

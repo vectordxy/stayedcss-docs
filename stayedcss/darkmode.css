@@ -1,4 +1,5 @@
-@import "./style-components-home-intro/darkmode.css";
+@import "./style-components-home-mainpage/darkmode.css";
+@import "./style-components-global-modebuttonexample/darkmode.css";
 @import "./style-rootlayout/darkmode.css";
 @import "./style-components-global-modebutton/darkmode.css";
 @import "./style-components-global-navbar/darkmode.css";

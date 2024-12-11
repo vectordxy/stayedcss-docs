@@ -40,7 +40,7 @@ const style = applyStyle({
   componentId: "components/Global/NavBar",
   container: {
     zIndex: 100,
-    backgroundColor: "white",
+    backgroundColor: grayColors[0],
     position: "fixed",
     top: 0,
     width: "100%",

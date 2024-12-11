@@ -4,7 +4,7 @@ import CodeBlock from "@/src/components/docs/CodeBlock";
 
 export default function page() {
   return (
-    <Article title="Dark Mode">
+    <Article title="Pseudo Elements">
       <Section title="Install via npm or yarn">
         StayedCSS can be easily installed using npm or yarn.
         <br />

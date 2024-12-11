@@ -1,4 +1,8 @@
-import { stayedcssDark, stayedcss } from "../../node_modules/stayedcss/src";
+import {
+  stayedcssDark,
+  stayedcss,
+  handlePostRequest,
+} from "../../node_modules/stayedcss/src";
 
 import { MainInput } from "../../node_modules/stayedcss/src/client";
 
@@ -8,4 +12,8 @@ export const applyStyle = (input: MainInput) => {
 
 export const applyDarkStyle = (input: MainInput) => {
   return stayedcssDark(input);
+};
+
+export const postStyles = (input: any) => {
+  return handlePostRequest(input);
 };
