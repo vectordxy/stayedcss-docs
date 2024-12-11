@@ -421,7 +421,7 @@ space-separated-tokens@^1.0.0:
   integrity sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==
 
 "stayedcss@file:../stayedcss":
-  version "0.0.3"
+  version "0.0.4"
   resolved "file:../stayedcss"
   dependencies:
     next "^15.0.3"
