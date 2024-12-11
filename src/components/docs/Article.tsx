@@ -30,6 +30,12 @@ const style = applyStyle({
     marginTop: 32,
     lineHeight: "1.5em",
   },
-
-  // "@tablet": {},
+  "@tablet": {
+    title: {
+      fontSize: 24,
+    },
+    content: {
+      fontSize: 14,
+    },
+  },
 });

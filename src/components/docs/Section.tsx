@@ -9,7 +9,7 @@ export default function Section({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className={style.container}>
       <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.children}>{children}</div>
     </div>
@@ -18,10 +18,18 @@ export default function Section({
 
 const style = applyStyle({
   componentId: "components/Docs/Section",
+  container: {
+    paddingBottom: 48,
+  },
   title: {
     fontSize: 21,
   },
   children: {
-    margin: "12px 0 36px 0",
+    margin: "12px 0",
+  },
+  "@tablet": {
+    title: {
+      fontSize: 18,
+    },
   },
 });

@@ -9,6 +9,9 @@ import { grayColors } from "@/src/utils/constant";
 
 export const metadata: Metadata = {
   title: "stayedcss",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default async function RootLayout({

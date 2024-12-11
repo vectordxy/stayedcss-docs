@@ -32,7 +32,7 @@ export default function page() {
           right away without additional learning, integrating it naturally into
           your Next.js projects.
         </Section>
-        <Section title="4. Lightweight Library">
+        <Section title="4. Lightweight">
           The library is extremely lightweight with minimal dependencies. It
           minimizes its impact on project performance while delivering powerful
           styling capabilities. It strikes a perfect balance between performance

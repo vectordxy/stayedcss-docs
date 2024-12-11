@@ -10,15 +10,10 @@ import {
   applyClientStyle,
 } from "@/src/utils/getClientModule";
 
-const gettingStarted = ["Introduction", "Installation"];
+const gettingStarted = ["Introduction", "Preview Code", "Installation"];
 const setUp = ["Server Components", "Client Components"];
 const styles = ["Basic", "Pseudo", "Media Query", "Dark Mode"];
-const community = [
-  "Contribution",
-  "Project Structure",
-  "Development Plan",
-  "Feedback",
-];
+const community = ["Contribution", "Project Structure", "Development Plan"];
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");

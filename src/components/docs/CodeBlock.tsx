@@ -32,6 +32,7 @@ export default function CodeBlock({
         style={materialDark}
         customStyle={{
           padding: "16px 18px",
+          margin: "16px 0",
           fontSize: 14,
           borderRadius: 3,
           lineHeight: "1.25em",
@@ -40,7 +41,7 @@ export default function CodeBlock({
         {code}
       </SyntaxHighlighter>
       <button className={style.button} onClick={handleCopy}>
-        {copied ? "Copied!" : "Copy"}
+        {copied ? "copied!" : "copy"}
       </button>
     </div>
   );
