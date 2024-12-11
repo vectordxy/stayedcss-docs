@@ -10,8 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "highlight.js": "^11.10.0",
     "next": "15.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,6 +19,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "typescript": "^5"
   }
 }
