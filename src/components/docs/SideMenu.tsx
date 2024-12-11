@@ -11,7 +11,7 @@ import {
 } from "@/src/utils/getClientModule";
 
 const gettingStarted = ["Introduction", "Preview Code", "Installation"];
-const setUp = ["Server Components", "Client Components"];
+const setUp = ["Server Components", "Client Components", "Types"];
 const styles = ["Basic", "Pseudo", "Media Query", "Dark Mode"];
 const community = ["Contribution", "Project Structure", "Development Plan"];
 

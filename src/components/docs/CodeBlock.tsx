@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { materialDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { applyClientStyle } from "@/src/utils/getClientModule";
 import { grayColors } from "@/src/utils/constant";
@@ -29,7 +29,7 @@ export default function CodeBlock({
     <div className={style.container}>
       <SyntaxHighlighter
         language={language}
-        style={materialDark}
+        style={vscDarkPlus}
         customStyle={{
           padding: "16px 18px",
           margin: "16px 0",

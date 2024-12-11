@@ -1,8 +1,8 @@
 import {
   changeScreenMode,
   saveScreenMode,
-  stayedClientDarkStyle,
-  stayedClientStyle,
+  stayedcssClientDark,
+  stayedcssClient,
   MainInput,
 } from "../../node_modules/stayedcss/src/client";
 
@@ -15,9 +15,9 @@ export const changeMode = (mode: "light" | "dark") => {
 };
 
 export const applyClientStyle = (input: MainInput) => {
-  return stayedClientStyle(input);
+  return stayedcssClient(input);
 };
 
 export const applyClientDarkStyle = (input: MainInput) => {
-  return stayedClientDarkStyle(input);
+  return stayedcssClientDark(input);
 };
