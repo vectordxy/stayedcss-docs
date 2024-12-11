@@ -1,9 +1,9 @@
 import {
-  stayedClientDarkStyle,
-  stayedClientStyle,
   changeScreenMode,
   saveScreenMode,
-} from "../../node_modules/stayedcss/src/client";
+  stayedClientDarkStyle,
+  stayedClientStyle,
+} from "stayedcss/client";
 
 export const setModeServer = (mode: string) => {
   return saveScreenMode(mode);
