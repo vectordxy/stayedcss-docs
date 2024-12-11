@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { boldFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 
-export default function Section({
+export default function Article({
   title,
   children,
 }: {
@@ -10,7 +10,7 @@ export default function Section({
   children: ReactNode;
 }) {
   return (
-    <div className={style.container} id={title.replaceAll(" ", "-")}>
+    <div className={style.container}>
       <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.content}>{children}</div>
     </div>
@@ -18,16 +18,18 @@ export default function Section({
 }
 
 const style = applyStyle({
-  componentId: "components/Docs/Section",
+  componentId: "components/Docs/Article",
   container: {
     marginBottom: 60,
-  },
-  content: {
-    marginTop: 32,
-    lineHeight: "1.5em",
   },
   title: {
     fontSize: 32,
     marginTop: 9,
   },
+  content: {
+    marginTop: 32,
+    lineHeight: "1.5em",
+  },
+
+  // "@tablet": {},
 });

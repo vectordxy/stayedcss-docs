@@ -1,6 +1,5 @@
 import Article from "@/src/components/docs/Article";
-import { boldFont } from "@/src/utils/fonts";
-import { applyStyle } from "@/src/utils/getModule";
+import Section from "@/src/components/docs/Section";
 
 export default function page() {
   return (
@@ -10,11 +9,9 @@ export default function page() {
         provides full support for both server and client components, offering
         various styling features such as pseudo-elements, media queries, and
         dark mode with no flickering. Additionally, it adopts the same syntax as
-        standard CSS, making it easy to integrate into your projects.
-        <br />
-        <br />
-        Currently, StayedCSSis available in beta version, and it will be more
-        stable and efficient. Stay tuned!
+        standard CSS, making it easy to integrate into your projects. Currently,
+        StayedCSSis available in beta version, and it will be more stable and
+        efficient. Stay tuned!
       </Article>
       <Article title="Main Features">
         <Section title="1. Full Support for Server and Client Components">
@@ -42,33 +39,8 @@ export default function page() {
           and flexibility.
         </Section>
         This library provides efficient and robust CSS styling for your Next.js
-        projects. Try it out today! 🎨✨
+        projects. Try it out today!
       </Article>
     </>
   );
 }
-
-function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <div className={`${boldFont.className} ${style.title}`}>{title}</div>
-      <div className={style.children}>{children}</div>
-    </div>
-  );
-}
-
-const style = applyStyle({
-  componentId: "docs/getting-started/introdcution",
-  title: {
-    fontSize: 21,
-  },
-  children: {
-    margin: "12px 0 36px 0",
-  },
-});

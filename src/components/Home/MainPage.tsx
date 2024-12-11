@@ -4,7 +4,7 @@ import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import { boldFont, lightFont } from "@/src/utils/fonts";
 import { grayColors } from "@/src/utils/constant";
 
-export default function Intro() {
+export default function MainPage() {
   return (
     <div className={style.container}>
       <div className={style.box}>
@@ -29,7 +29,7 @@ export default function Intro() {
 }
 
 const style = applyStyle({
-  componentId: "components/Home/Intro",
+  componentId: "components/Home/MainPage",
   container: {
     height: "100vh",
     display: "flex",

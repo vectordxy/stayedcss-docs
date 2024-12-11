@@ -13,7 +13,12 @@ import {
 const gettingStarted = ["Introduction", "Installation"];
 const setUp = ["Server Components", "Client Components"];
 const styles = ["Basic", "Pseudo", "Media Query", "Dark Mode"];
-const contribution = ["Guide"];
+const community = [
+  "Contribution",
+  "Project Structure",
+  "Development Plan",
+  "Feedback",
+];
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");
@@ -65,12 +70,10 @@ export default function SideMenu() {
         ))}
       </div>
       <div className={style.box}>
-        <div className={`${boldFont.className} ${style.title}`}>
-          Contribution
-        </div>
-        {contribution.map((item, index) => (
+        <div className={`${boldFont.className} ${style.title}`}>Community</div>
+        {community.map((item, index) => (
           <LinkItem
-            category="contribution"
+            category="community"
             name={item}
             currentPathname={currentPathname}
             key={index}
@@ -111,7 +114,7 @@ const style = applyClientStyle({
     top: "70px",
     fontSize: 14,
     padding: "16px 0",
-    height: 400,
+    height: 500,
   },
   box: {
     padding: "6px 27px",
@@ -120,9 +123,10 @@ const style = applyClientStyle({
     margin: "8px 0",
   },
   content: {
-    padding: "6px 3px",
+    padding: "6px 5px",
     display: "block",
     cursor: "pointer",
+
     ":hover": {
       color: colors[5],
     },
@@ -139,6 +143,6 @@ const style = applyClientStyle({
 applyClientDarkStyle({
   componentId: "components/Docs/SideMenu",
   content: {
-    color: grayColors[2],
+    color: grayColors[3],
   },
 });

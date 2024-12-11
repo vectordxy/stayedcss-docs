@@ -1,5 +1,6 @@
-import { stayedDarkStyle, stayedStyle } from "stayedcss";
-import { MainInput } from "stayedcss/client";
+import { stayedDarkStyle, stayedStyle } from "../../node_modules/stayedcss/src";
+
+import { MainInput } from "../../node_modules/stayedcss/src/client";
 
 export const applyStyle = (input: MainInput) => {
   return stayedStyle(input);

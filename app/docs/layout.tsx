@@ -1,5 +1,5 @@
-import SideMenu from "@/src/components/docs/SideMenu";
 import { applyStyle } from "@/src/utils/getModule";
+import SideMenu from "@/src/components/docs/SideMenu";
 
 export default async function DocsLayout({
   children,
