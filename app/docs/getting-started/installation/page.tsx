@@ -1,16 +1,14 @@
-import Section from "@/src/components/docs/Section";
+import Section from "@/src/components/docs/Article";
 import CodeBlock from "@/src/components/docs/CodeBlock";
 
 export default function page() {
-  const installationExample = `npm install stayedcss`;
-
   return (
     <>
       <Section title="Installation">
-        <CodeBlock language="plaintext" code={installationExample} />
-      </Section>
-      <Section title="Main Features">
-        <div></div>
+        you can install via npm
+        <CodeBlock language="plaintext" code="npm install stayedcss" />
+        or, if you use yarn
+        <CodeBlock language="plaintext" code="yarn add stayedcss" />
       </Section>
     </>
   );

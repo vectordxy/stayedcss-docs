@@ -1,7 +1,7 @@
-import { boldFont, lightFont } from "@/src/utils/fonts";
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import Link from "next/link";
-import { text } from "./dummydata";
+
+import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { boldFont, lightFont } from "@/src/utils/fonts";
 import { grayColors } from "@/src/utils/constant";
 
 export default function Intro() {
@@ -9,7 +9,14 @@ export default function Intro() {
     <div className={style.container}>
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
-        <div className={`${lightFont.className} ${style.subTitle}`}>{text}</div>
+        <div className={`${lightFont.className} ${style.subTitle}`}>
+          StayedCSS is a static CSS library designed for Next.js projects. It
+          provides full support for both server and client components, offering
+          various styling features such as pseudo-elements, media queries, and
+          dark mode with no flickering. Additionally, it adopts the same syntax
+          as standard CSS, making it easy to integrate into your projects.
+          <br />
+        </div>
         <Link
           href="/docs/getting-started/introduction"
           className={`${lightFont.className} ${style.startButton}`}

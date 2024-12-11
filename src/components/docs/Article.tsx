@@ -10,7 +10,7 @@ export default function Section({
   children: ReactNode;
 }) {
   return (
-    <div id={title.replaceAll(" ", "-")}>
+    <div className={style.container} id={title.replaceAll(" ", "-")}>
       <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.content}>{children}</div>
     </div>
@@ -19,9 +19,11 @@ export default function Section({
 
 const style = applyStyle({
   componentId: "components/Docs/Section",
+  container: {
+    marginBottom: 60,
+  },
   content: {
     marginTop: 32,
-    height: "90vh",
     lineHeight: "1.5em",
   },
   title: {

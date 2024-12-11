@@ -106,7 +106,7 @@ function LinkItem({
 const style = applyClientStyle({
   componentId: "components/Docs/SideMenu",
   container: {
-    width: 300,
+    width: 270,
     position: "sticky",
     top: "70px",
     fontSize: 14,

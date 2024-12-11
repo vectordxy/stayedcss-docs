@@ -43,7 +43,7 @@ const style = applyStyle({
 applyDarkStyle({
   componentId: "RootLayout",
   container: {
-    color: grayColors[1],
+    color: grayColors[2],
     backgroundColor: grayColors[10],
   },
 });

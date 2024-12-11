@@ -60,7 +60,7 @@ const style = applyClientStyle({
     padding: "3px 5px",
     backgroundColor: grayColors[7],
     transition: "background-color 0.3s ease-in-out",
-    color: grayColors[4],
+    color: grayColors[3],
     border: "none",
     cursor: "pointer",
     ":hover": {

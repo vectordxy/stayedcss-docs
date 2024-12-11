@@ -1,4 +1,4 @@
-import Section from "@/src/components/docs/Section";
+import Section from "@/src/components/docs/Article";
 
 export default function page() {
   return (

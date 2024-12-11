@@ -27,7 +27,7 @@ const style = applyStyle({
     justifyContent: "center",
   },
   box: {
-    width: 1200,
+    width: 1180,
     display: "flex",
     paddingTop: 70,
   },
@@ -42,7 +42,7 @@ const style = applyStyle({
   },
   frame: {
     lineHeight: "1.5em",
-    minWidth: 900,
+    maxWidth: 820,
   },
   "@desktop": {
     box: {
