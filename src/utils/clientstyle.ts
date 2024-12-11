@@ -1,4 +1,6 @@
-export const postData = async (input: any) => {
+import { MainInput } from "stayedcss/client";
+
+export const postData = async (input: MainInput) => {
   try {
     // 서버가 실행 중인지 확인 (임시 로직)
     if (typeof window === "undefined") {
