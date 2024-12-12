@@ -8,13 +8,13 @@ export default function page() {
     <Article title="Dark Mode">
       <Section title="Set Up">
         <Content title="1. Create cookieStore in app/layout.tsx">
+          <CodeBlock language="jsx" code={code1} />
           Use cookieStore to retrieve the current theme mode from cookies or set
           a default.
-          <CodeBlock language="jsx" code={code1} />
         </Content>
         <Content title="2. Create an API">
-          Create an API to save the theme mode (Light or Dark) from the client.
           <CodeBlock language="jsx" code={code2} />
+          Create an API to save the theme mode (Light or Dark) from the client.
         </Content>
       </Section>
       <Section title="Update LightMode/DarkMode">

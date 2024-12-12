@@ -1,19 +1,14 @@
-@import "./style-components-docs-breakpoints-table/style.css";
-@import "./style-components-docs-list/style.css";
-@import "./style-components-docs-pseudoclasses/style.css";
-@import "./style-components-docs-content/style.css";
-@import "./style-components-docs-modebuttonexample/style.css";
+@import "./style-components/docs/article/style.css";
+@import "./style-components/docs/codeblock/style.css";
+@import "./style-components/docs/layout/style.css";
+@import "./style-components/docs/section/style.css";
+@import "./style-components/docs/sidemenu/style.css";
+
+@import "./style-components/global/footer/style.css";
+@import "./style-components/global/modebutton/style.css";
+@import "./style-components/global/navbar/style.css";
+
+@import "./style-components/home/mainpage/style.css";
 @import "./style-rootlayout/style.css";
-@import "./style-components-docs-codeblock/style.css";
-@import "./style-components-docs-layout/style.css";
-@import "./style-components-docs-section/style.css";
-@import "./style-components-docs-sidemenu/style.css";
-@import "./style-components-docs-article/style.css";
-
-@import "./style-components-global-footer/style.css";
-@import "./style-components-global-modebutton/style.css";
-@import "./style-components-global-navbar/style.css";
-
-@import "./style-components-home-mainpage/style.css";
 
 @import "./darkmode.css";

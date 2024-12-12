@@ -18,7 +18,7 @@ export default function Content({
 const style = applyStyle({
   componentId: "components/docs/content",
   container: {
-    paddingBottom: 32,
+    paddingBottom: 24,
   },
   title: {
     paddingTop: 5,

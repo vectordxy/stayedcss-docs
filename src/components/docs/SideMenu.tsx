@@ -20,7 +20,12 @@ const styles = [
   "Media Query",
   "Dark Mode",
 ];
-const community = ["Preview Code", "Contribution", "Development Plan"];
+const community = [
+  "Preview Code",
+  "Feedback",
+  "Contribution",
+  "Development Plan",
+];
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");
