@@ -5,14 +5,53 @@ import CodeBlock from "@/src/components/docs/CodeBlock";
 export default function page() {
   return (
     <Article title="Media Query">
-      <Section title="Install via npm or yarn">
-        StayedCSS can be easily installed using npm or yarn.
-        <br />
-        <br /> with npm
-        <CodeBlock language="plaintext" code="npm install stayedcss" />
-        or with yarn
-        <CodeBlock language="plaintext" code="yarn add stayedcss" />
+      <Section title="Example">
+        To define media queries, include them as top-level keys in your style
+        object. Each media query is defined as a key (e.g., "@desktop") and
+        contains styles that apply only when the specified condition is met.
+        Breakpoints are predefined for consistency across your project.
+        <CodeBlock language="jsx" copy={false} code={codeExample} />
+      </Section>
+      <Section title="Default Breakpoints">
+        <CodeBlock language="jsx" copy={false} code={breakpointsExample} />
       </Section>
     </Article>
   );
 }
+
+const codeExample = `const style = stayedcss({
+  componentId: "components/docs/media-query-example",
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "20px",
+    backgroundColor: "lightgray",
+  },
+  "@mobile": {
+    container: {
+      backgroundColor: "pink", 
+      padding: "10px",
+    },
+  },
+  "@tablet": {
+    container: {
+      backgroundColor: "lightblue", 
+      padding: "15px",
+    },
+  },
+  "@desktop": {
+    container: {
+      backgroundColor: "lightgreen",
+      width: "50%",
+    },
+  },
+});
+
+`;
+
+const breakpointsExample = `const defaultBreakpoints = {
+  "@mobile": "(max-width: 500px)",
+  "@tablet": "(max-width: 800px)",
+  "@laptop": "(max-width: 1024px)",
+  "@desktop": "(max-width: 1280px)",
+}`;

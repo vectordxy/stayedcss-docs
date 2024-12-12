@@ -1,5 +1,5 @@
-import { grayColors } from "@/src/utils/constant";
-import { applyStyle } from "@/src/utils/getModule";
+import { colors, grayColors } from "@/src/utils/constant";
+import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 
 export default function List({ input }: { input: string[] }) {
   return (
@@ -23,8 +23,16 @@ const style = applyStyle({
   item: {
     fontSize: 14,
     padding: "4px 8px",
-    backgroundColor: grayColors[9],
+    backgroundColor: grayColors[2],
     borderRadius: 2,
+    color: grayColors[8],
+  },
+});
+
+applyDarkStyle({
+  componentId: "components/docs/list",
+  item: {
+    backgroundColor: grayColors[9],
     color: grayColors[3],
   },
 });

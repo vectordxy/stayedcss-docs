@@ -14,7 +14,7 @@ export default function page() {
         what the pseudo-element should display.
         <CodeBlock language="jsx" copy={false} code={codeExample} />
       </Section>
-      <Section title="Available Pseudo-Classes">
+      <Section title="Available Pseudo-Elements">
         <List input={validPseudoElements} />
       </Section>
     </Article>
