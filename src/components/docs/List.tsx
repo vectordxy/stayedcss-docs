@@ -24,7 +24,7 @@ const style = applyStyle({
   item: {
     fontSize: 14,
     padding: "4px 8px",
-    backgroundColor: grayColors[2],
+    backgroundColor: grayColors[1],
     borderRadius: 2,
     color: grayColors[8],
   },

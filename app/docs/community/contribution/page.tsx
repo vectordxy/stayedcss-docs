@@ -47,17 +47,6 @@ export default function page() {
         </div>
       </Section>
 
-      <Section title="Development Plans">
-        I share the development plans These are features currently in
-        development or planned for future updates. I hope they will be helpful
-        to you.
-        <Content title="1. Styling Autocompletion in VSCode">
-          Enhance developer productivity by providing intelligent autocompletion
-          for styling properties directly in VSCode. This will make it easier
-          and faster to write styles without needing to refer to external
-          documentation.
-        </Content>
-      </Section>
       <Section title="Have Questions or Feedback?">
         If you have any questions or suggestions, please ㄴopen an issue or
         reach out via GitHub. I'm always happy to hear from contributors like

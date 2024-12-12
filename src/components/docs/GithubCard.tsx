@@ -35,7 +35,6 @@ export default function GithubCard({
 const style = applyStyle({
   componentId: "components/community/previewcode",
   card: {
-    width: "100%",
     borderRadius: 3,
     padding: "21px 23px 27px 23px",
     backgroundColor: "#fff",
