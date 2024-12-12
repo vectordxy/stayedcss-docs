@@ -5,4 +5,4 @@
 .cardTitle-components-community-previewcode:hover { text-decoration: underline; } 
 .cardTitle-components-community-previewcode { font-size: 18px; font-weight: bold; text-decoration: none; color: #0366d6; margin-left: 10px;  }
 .cardHeader-components-community-previewcode { display: flex;  }
-.card-components-community-previewcode { width: 100%; border-radius: 3px; padding: 21px 23px 27px 23px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); font-family: Arial, sans-serif; margin-top: 20px;  }
+.card-components-community-previewcode { width: 100%; border-radius: 3px; padding: 21px 23px 27px 23px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); font-family: Arial, sans-serif; margin-top: 12px; margin-bottom: 28px;  }

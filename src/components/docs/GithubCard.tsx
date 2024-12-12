@@ -41,7 +41,8 @@ const style = applyStyle({
     backgroundColor: "#fff",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
     fontFamily: "Arial, sans-serif",
-    marginTop: 20,
+    marginTop: 12,
+    marginBottom: 28,
   },
   cardHeader: {
     display: "flex",

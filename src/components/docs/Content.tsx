@@ -19,7 +19,7 @@ export default function Content({
 const style = applyStyle({
   componentId: "components/docs/content",
   container: {
-    padding: "12px 0",
+    margin: "12px 0",
   },
   title: {
     paddingTop: 5,

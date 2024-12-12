@@ -10,7 +10,7 @@ export default function Article({
   children: ReactNode;
 }) {
   return (
-    <div className={style.container}>
+    <div>
       <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.content}>{children}</div>
     </div>
@@ -19,9 +19,6 @@ export default function Article({
 
 const style = applyStyle({
   componentId: "components/Docs/Article",
-  container: {
-    // marginBottom: 60,
-  },
   title: {
     fontSize: 36,
     marginTop: 9,
