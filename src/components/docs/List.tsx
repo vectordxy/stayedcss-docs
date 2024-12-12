@@ -19,6 +19,7 @@ const style = applyStyle({
     display: "flex",
     flexWrap: "wrap",
     gap: "12px",
+    margin: "16px 0",
   },
   item: {
     fontSize: 14,

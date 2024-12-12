@@ -25,7 +25,7 @@ export default function GithubCard({
       <p className={style.cardDescription}>{description}</p>
       <div className={style.cardFooter}>
         <a className={style.cardButton} href={link} target="_blank">
-          View on GitHub
+          View Code on GitHub
         </a>
       </div>
     </div>
@@ -41,7 +41,7 @@ const style = applyStyle({
     backgroundColor: "#fff",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
     fontFamily: "Arial, sans-serif",
-    margin: "20px auto",
+    marginTop: 20,
   },
   cardHeader: {
     display: "flex",

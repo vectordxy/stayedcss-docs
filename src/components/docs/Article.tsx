@@ -20,14 +20,14 @@ export default function Article({
 const style = applyStyle({
   componentId: "components/Docs/Article",
   container: {
-    marginBottom: 60,
+    // marginBottom: 60,
   },
   title: {
     fontSize: 36,
     marginTop: 9,
   },
   content: {
-    marginTop: 32,
+    marginTop: 24,
     lineHeight: "1.5em",
   },
   "@tablet": {

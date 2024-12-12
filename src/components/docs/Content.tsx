@@ -1,3 +1,4 @@
+import { boldFont } from "@/src/utils/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 
 export default function Content({
@@ -9,7 +10,7 @@ export default function Content({
 }) {
   return (
     <div className={style.container}>
-      <div className={style.title}>{title}</div>
+      <div className={`${boldFont.className} ${style.title}`}>{title}</div>
       <div className={style.children}>{children}</div>
     </div>
   );
@@ -18,7 +19,7 @@ export default function Content({
 const style = applyStyle({
   componentId: "components/docs/content",
   container: {
-    paddingBottom: 24,
+    padding: "12px 0",
   },
   title: {
     paddingTop: 5,

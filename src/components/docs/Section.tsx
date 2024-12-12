@@ -19,8 +19,7 @@ export default function Section({
 const style = applyStyle({
   componentId: "components/Docs/Section",
   container: {
-    paddingTop: 12,
-    paddingBottom: 42,
+    margin: "48px 0",
   },
   title: {
     fontSize: 24,
