@@ -1,7 +1,15 @@
 import Github from "@/src/assets/svg/Github";
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 
-export default function GithubCard() {
+export default function GithubCard({
+  link,
+  projectTitle,
+  description,
+}: {
+  link: string;
+  projectTitle: string;
+  description: string;
+}) {
   return (
     <div className={style.card}>
       <div className={style.cardHeader}>
@@ -9,28 +17,14 @@ export default function GithubCard() {
           <Github />
         </div>
         <div>
-          <a
-            className={style.cardTitle}
-            href="https://github.com/vectordxy/stayedcss-docs"
-            target="_blank"
-          >
-            vectordxy / stayedcss-docs
+          <a className={style.cardTitle} href={link} target="_blank">
+            vectordxy / {projectTitle}
           </a>
         </div>
       </div>
-      <p className={style.cardDescription}>
-        StayedCSS is a static CSS library designed for Next.js projects. It
-        provides full support for both server and client components, offering
-        various styling features such as pseudo-elements, media queries, and
-        dark mode with no flickering. Additionally, it adopts the same syntax as
-        standard CSS, making it easy to integrate into your projects.
-      </p>
+      <p className={style.cardDescription}>{description}</p>
       <div className={style.cardFooter}>
-        <a
-          className={style.cardButton}
-          href="https://github.com/vectordxy/stayedcss-docs"
-          target="_blank"
-        >
+        <a className={style.cardButton} href={link} target="_blank">
           View on GitHub
         </a>
       </div>
@@ -94,7 +88,6 @@ applyDarkStyle({
   card: {
     backgroundColor: "#161b22",
     color: "#c9d1d9",
-    // boxShadow: "0 4px 6px rgba(0, 0, 0, 0.15)",
   },
   cardTitle: {
     color: "#58a6ff",
