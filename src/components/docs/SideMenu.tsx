@@ -23,7 +23,7 @@ const styles = [
 const community = [
   "Preview Code",
   "Feedback",
-  "Contribution",
+  "Contribution Guide",
   "Development Plan",
 ];
 

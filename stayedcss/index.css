@@ -1,3 +1,7 @@
+@import "./style-components/docs/content/style.css";
+@import "./style-src/svg/github/style.css";
+@import "./style-components/community/previewcode/style.css";
+@import "./style-components/docs/list/style.css";
 @import "./style-components/docs/article/style.css";
 @import "./style-components/docs/codeblock/style.css";
 @import "./style-components/docs/layout/style.css";

@@ -1,8 +1,15 @@
+import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { cookies } from "next/headers";
+
+const cookieStore = await cookies();
+const mode = cookieStore.get("mode")?.value || "light";
+
 export default function Github() {
   return (
     <svg
       width={22}
       role="img"
+      className={style.icon}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -11,3 +18,17 @@ export default function Github() {
     </svg>
   );
 }
+
+const style = applyStyle({
+  componentId: "src/svg/github",
+  icon: {
+    fill: "black",
+  },
+});
+
+applyDarkStyle({
+  componentId: "src/svg/github",
+  icon: {
+    fill: "#c9d1d9",
+  },
+});

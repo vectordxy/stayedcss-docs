@@ -1,3 +1,6 @@
+@import "./style-src/svg/github/darkmode.css";
+@import "./style-components/community/previewcode/darkmode.css";
+@import "./style-components/docs/list/darkmode.css";
 @import "./style-components/docs/sidemenu/darkmode.css";
 @import "./style-components/global/navbar/darkmode.css";
 @import "./style-components/global/modebutton/darkmode.css";
