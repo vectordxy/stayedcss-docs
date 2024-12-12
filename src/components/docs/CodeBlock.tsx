@@ -4,7 +4,6 @@ import { useState } from "react";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { applyClientStyle } from "@/src/utils/getClientModule";
-import { grayColors } from "@/src/utils/constant";
 import Copy from "@/src/assets/svg/Copy";
 import Check from "@/src/assets/svg/Check";
 
@@ -37,7 +36,7 @@ export default function CodeBlock({
         customStyle={{
           padding: "16px 18px",
           margin: "16px 0",
-          fontSize: 14,
+          fontSize: 16,
           borderRadius: 3,
           lineHeight: "1.25em",
         }}
