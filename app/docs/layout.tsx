@@ -26,6 +26,7 @@ const style = applyStyle({
     display: "flex",
     justifyContent: "center",
     paddingBottom: 100,
+    paddingRight: 36,
   },
   box: {
     width: 1180,
@@ -55,6 +56,9 @@ const style = applyStyle({
     },
   },
   "@laptop": {
+    container: {
+      paddingRight: 0,
+    },
     box: {
       padding: "70px 32px",
     },

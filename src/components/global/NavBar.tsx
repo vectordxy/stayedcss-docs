@@ -15,18 +15,17 @@ export default function NavBar() {
           <div className={`${lightFont.className} ${style.beta}`}>beta</div>
           <ModeButton />
         </div>
-        <div className={style.leftItems}>
+        <div className={style.linkItems}>
           <Link
             href="/docs/getting-started/introduction"
-            className={style.leftItem}
+            className={style.linkItem}
           >
             Docs
           </Link>
-
           <a
             target="_blank"
             href="https://github.com/vectordxy/stayedcss"
-            className={style.leftItem}
+            className={style.linkItem}
           >
             Github
           </a>
@@ -68,18 +67,17 @@ const style = applyStyle({
     margin: 6,
     paddingTop: 1,
   },
-  leftItems: {
+  linkItems: {
     display: "flex",
     alignItems: "center",
     fontSize: 12,
   },
-  leftItem: {
-    margin: 10,
+  linkItem: {
+    marginLeft: 10,
     padding: 10,
-    textDecoration: "none",
+    cursor: "pointer",
     ":hover": {
       color: colors[6],
-      cursor: "pointer",
     },
   },
 });
@@ -92,7 +90,10 @@ applyDarkStyle({
   title: {
     color: grayColors[2],
   },
-  leftItem: {
+  linkItem: {
     color: grayColors[2],
+    ":hover": {
+      color: colors[5],
+    },
   },
 });

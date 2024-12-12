@@ -1,7 +1,7 @@
 import {
   stayedcssDark,
   stayedcss,
-  handlePostRequest,
+  requestStyles,
 } from "../../node_modules/stayedcss/src";
 
 import { MainInput } from "../../node_modules/stayedcss/src/client";
@@ -15,5 +15,5 @@ export const applyDarkStyle = (input: MainInput) => {
 };
 
 export const postStyles = (input: any) => {
-  return handlePostRequest(input);
+  return requestStyles(input);
 };

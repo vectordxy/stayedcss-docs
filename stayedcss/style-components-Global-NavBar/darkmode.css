@@ -1,3 +1,4 @@
-.dark .leftItem-components-global-navbar { color: #d5d5d5;  }
+.dark .linkItem-components-global-navbar:hover { color: #9f7d60; } 
+.dark .linkItem-components-global-navbar { color: #d5d5d5;  }
 .dark .title-components-global-navbar { color: #d5d5d5;  }
 .dark .container-components-global-navbar { background-color: #151515;  }

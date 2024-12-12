@@ -11,5 +11,5 @@ export default function page() {
   );
 }
 
-const example = `import { MainInput, Config } from "stayedcss/client";
+const example = `import { MainInput } from "stayedcss/client";
 `;

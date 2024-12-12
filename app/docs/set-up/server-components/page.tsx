@@ -4,6 +4,8 @@ import CodeBlock from "@/src/components/docs/CodeBlock";
 export default function page() {
   return (
     <Article title="Server Components">
+      You can use in server components to define and apply styles. Here's how
+      you can integrate it:
       <CodeBlock language="jsx" copy={false} code={example} />
     </Article>
   );

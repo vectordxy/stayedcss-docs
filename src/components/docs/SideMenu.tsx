@@ -128,7 +128,6 @@ const style = applyClientStyle({
     padding: "6px 5px",
     display: "block",
     cursor: "pointer",
-
     ":hover": {
       color: colors[5],
     },
@@ -146,5 +145,8 @@ applyClientDarkStyle({
   componentId: "components/Docs/SideMenu",
   content: {
     color: grayColors[3],
+    ":hover": {
+      color: colors[5],
+    },
   },
 });
