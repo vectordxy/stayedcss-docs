@@ -1,47 +1,23 @@
 import Article from "@/src/components/docs/Article";
 import Section from "@/src/components/docs/Section";
 import CodeBlock from "@/src/components/docs/CodeBlock";
-import Content from "@/src/components/docs/Content";
-import { applyStyle } from "@/src/utils/getModule";
-import { grayColors } from "@/src/utils/constant";
+import List from "@/src/components/docs/List";
 
 export default function page() {
   return (
     <Article title="Pseudo Classes">
       <Section title="Example">
         To apply pseudo-classes, simply define them as properties within the
-        style object for the desired class. Each pseudo-class is written as a
-        key (e.g., ":hover") with its styles defined in an inner object.
+        style object for the class. Each pseudo-class is written as a key (e.g.,
+        ":hover") with its styles defined in an inner object.
         <CodeBlock language="jsx" copy={false} code={codeExample} />
       </Section>
       <Section title="Available Pseudo-Classes">
-        <div className={style.container}>
-          {validPseudoClasses.sort().map((pseudoClass, index) => (
-            <div key={index} className={style.item}>
-              {pseudoClass}
-            </div>
-          ))}
-        </div>
+        <List input={validPseudoClasses} />
       </Section>
     </Article>
   );
 }
-
-const style = applyStyle({
-  componentId: "components/docs/pseudoClasses",
-  container: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "8px",
-  },
-  item: {
-    fontSize: 14,
-    padding: "4px 8px",
-    backgroundColor: grayColors[9],
-    borderRadius: 3,
-    color: grayColors[3],
-  },
-});
 
 const codeExample = `const style = stayedcss({
   componentId: "components/docs/article",
