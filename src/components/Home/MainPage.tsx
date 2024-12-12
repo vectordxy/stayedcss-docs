@@ -10,7 +10,7 @@ export default function MainPage() {
       <div className={style.box}>
         <div className={`${boldFont.className} ${style.title}`}>stayedcss:</div>
         <div className={`${lightFont.className} ${style.subTitle}`}>
-          StayedCSS is a static CSS library designed for Next.js projects. It
+          StayedCSS is a static CSS library designed for Next.js App Router. It
           provides full support for both server and client components, offering
           various styling features such as pseudo-elements, media queries, and
           dark mode with no flickering. Additionally, it adopts the same syntax

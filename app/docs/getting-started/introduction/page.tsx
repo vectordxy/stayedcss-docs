@@ -5,35 +5,35 @@ import Section from "@/src/components/docs/Section";
 export default function page() {
   return (
     <Article title="What is StayedCSS?">
-      StayedCSS is a static CSS library designed for Next.js projects. It
+      StayedCSS is a static CSS library designed for Next.js App Router. It
       provides full support for both server and client components, offering
       various styling.
-      <Section title="1. Full Support for Server and Client Components">
+      <Section title="1. Supports Both Server and Client">
         It provides seamless support for both Next.js server and client
         components. It generates CSS optimized for each environment, ensuring a
         stable styling experience. You can use it without worrying about
         compatibility between server and client components.
       </Section>
-      <Section title="2. Familiar CSS Syntax">
+      <Section title="2. No Learning Curve, You Already Know">
         With the same syntax as standard CSS, StayedCSS eliminates the learning
         curve. If you're familiar with CSS, you can start using it right away
         without additional learning, integrating it naturally into your Next.js
         projects.
         <CodeBlock language="jsx" copy={false} code={code1} />
       </Section>
-      <Section title="3. Various Styling">
-        Beyond basic styling, pseudo-elements, media queries, and dark mode are
-        all supported. Dark mode, in particular, is applied smoothly without
-        flickering, allowing for simple implementation even in complex
-        conditions.
+      <Section title="3. From Basic Styling to Advanced Selectors">
+        Beyond basic styling, pseudo-elements, pseudo-classes, media queries,
+        and dark mode are all supported. Dark mode, in particular, is applied
+        smoothly without flickering, allowing for simple implementation even in
+        complex conditions.
         <CodeBlock language="jsx" copy={false} code={code2} />
       </Section>
-      <Section title="4. Dark Mode without flickering">
+      <Section title="4. Dark Mode without Flickering">
         It supports dark mode and solves the common SSR challenge of screen
         flickering during reloads. It ensures a clean and consistent user
         experience.
       </Section>
-      <Section title="5. Lightweight">
+      <Section title="5. Lightweight with Simple Dependencies">
         It is extremely lightweight with minimal dependencies. It minimizes its
         impact on project performance while delivering powerful styling
         capabilities. It strikes a perfect balance between performance and
