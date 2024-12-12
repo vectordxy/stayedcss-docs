@@ -23,7 +23,7 @@ const style = applyStyle({
     marginBottom: 60,
   },
   title: {
-    fontSize: 32,
+    fontSize: 36,
     marginTop: 9,
   },
   content: {

@@ -2,65 +2,95 @@ import Article from "@/src/components/docs/Article";
 import Section from "@/src/components/docs/Section";
 import CodeBlock from "@/src/components/docs/CodeBlock";
 import Content from "@/src/components/docs/Content";
+import { applyStyle } from "@/src/utils/getModule";
+import { grayColors } from "@/src/utils/constant";
 
 export default function page() {
   return (
     <Article title="Pseudo Classes">
       <Section title="Example">
-        The stayedcss function allows you to define styles in a simple and
-        intuitive way, similar to writing traditional CSS. Instead of writing
-        styles in a .css file, you define them as JavaScript objects. This keeps
-        your styles co-located with your component logic.
-        <CodeBlock language="jsx" code={codeExample} />
+        To apply pseudo-classes, simply define them as properties within the
+        style object for the desired class. Each pseudo-class is written as a
+        key (e.g., ":hover") with its styles defined in an inner object.
+        <CodeBlock language="jsx" copy={false} code={codeExample} />
       </Section>
-      <Section title="Syntax">
-        <Content title="1. Write styles as object using camelCase">
-          <CodeBlock language="jsx" code={codeExample1} />
-          Style properties are defined in camelCase format instead of the
-          kebab-case used in CSS.
-        </Content>
-        <Content title="2. Numeric values default to px">
-          <CodeBlock language="jsx" code={codeExample2} />
-          When a numeric value is provided without a unit, it is automatically
-          interpreted as pixels. When a numeric value is provided without a
-          unit, it is automatically interpreted as pixels. If you want to
-          specify a different unit, provide the value as a string.
-        </Content>
-        <Content title="3. Use strings for multiple values with units">
-          <CodeBlock language="jsx" code={codeExample3} />
-          To define multiple values (e.g., for shorthand properties like
-          padding), use a string and explicitly specify the unit for each value.
-        </Content>
+      <Section title="Available Pseudo-Classes">
+        <div className={style.container}>
+          {validPseudoClasses.sort().map((pseudoClass, index) => (
+            <div key={index} className={style.item}>
+              {pseudoClass}
+            </div>
+          ))}
+        </div>
       </Section>
     </Article>
   );
 }
 
+const style = applyStyle({
+  componentId: "components/docs/pseudoClasses",
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "8px",
+  },
+  item: {
+    fontSize: 14,
+    padding: "4px 8px",
+    backgroundColor: grayColors[9],
+    borderRadius: 3,
+    color: grayColors[3],
+  },
+});
+
 const codeExample = `const style = stayedcss({
   componentId: "components/docs/article",
   container: {
     backgroundColor: "black",
-  },
-  title: {
-    fontSize: 27,
-    lineHeight: "1.5em",
-  },
-  content: {
-    margin: "16px 12px",
-    padding: "12px 8px 16px 2px",
+    ":hover":{
+      backgroundColor: "green",         
+    },
   },
 });`;
 
-const codeExample1 = `container: {
-  backgroundColor: "black",
-}`;
+const validPseudoClasses = [
+  ":hover",
+  ":focus",
+  ":active",
+  ":visited",
+  ":link",
+  ":focus-visible",
+  ":focus-within",
 
-const codeExample2 = `title: {
-  fontSize: 27, // font-size: 27px;
-  lineHeight: "1.5em", // line-height: 1.5em;
-},`;
+  ":checked",
+  ":disabled",
+  ":enabled",
+  ":required",
+  ":optional",
+  ":read-only",
+  ":read-write",
+  ":indeterminate",
+  ":invalid",
+  ":valid",
+  ":in-range",
+  ":out-of-range",
+  ":placeholder-shown",
+  ":fullscreen",
+  ":picture-in-picture",
 
-const codeExample3 = `content: {
-  margin: "16px 12px",
-  padding: "12px 8px 16px 2px",
-},`;
+  ":first-child",
+  ":last-child",
+  ":only-child",
+  ":first-of-type",
+  ":last-of-type",
+  ":only-of-type",
+  ":empty",
+
+  ":not",
+  ":root",
+  ":target",
+  ":is",
+  ":where",
+  ":has",
+  ":scope",
+];
