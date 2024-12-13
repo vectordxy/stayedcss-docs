@@ -52,7 +52,7 @@ const style = applyStyle({
   },
   box: {
     width: "100%",
-    padding: "0 36px",
+    padding: "0 27px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -76,11 +76,18 @@ const style = applyStyle({
     fontSize: 12,
   },
   linkItem: {
-    marginLeft: 10,
-    padding: 10,
+    marginLeft: 32,
     cursor: "pointer",
     ":hover": {
       color: colors[6],
+    },
+  },
+  "@laptop": {
+    box: {
+      padding: "0 21px",
+    },
+    linkItem: {
+      marginLeft: 15,
     },
   },
 });

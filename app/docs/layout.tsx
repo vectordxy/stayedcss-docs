@@ -62,7 +62,7 @@ const style = applyStyle({
       paddingRight: 0,
     },
     box: {
-      padding: "70px 32px",
+      padding: "70px 21px",
     },
     layout: {
       paddingTop: 84,

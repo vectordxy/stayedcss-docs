@@ -8,7 +8,7 @@ import {
   applyClientDarkStyle,
   applyClientStyle,
 } from "@/src/utils/getClientModule";
-import ArrowDropDown from "@/src/assets/svg/ArrowDropDown";
+import { ArrowDropDown, ArrowDropUp } from "@/src/assets/svg/ArrowDrop";
 import { colors, grayColors } from "@/src/constants/colors";
 import {
   community,
@@ -27,23 +27,31 @@ const convertToTitleCase = (str: string): string => {
 export default function MobileMenu() {
   const pathname = usePathname().split("/");
   const [currentPathname, setCurrentPathname] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setCurrentPathname(pathname[pathname.length - 1]);
   }, [pathname]);
 
   useEffect(() => {
-    setIsVisible(false);
+    setIsMenuOpen(false);
   }, [currentPathname]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
 
   return (
     <div className={style.container}>
-      <div className={style.box} onClick={() => setIsVisible(!isVisible)}>
+      <div className={style.box} onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <div className={style.title}>{convertToTitleCase(currentPathname)}</div>
-        <ArrowDropDown />
+        {isMenuOpen ? <ArrowDropUp /> : <ArrowDropDown />}
       </div>
-      {isVisible && (
+      {isMenuOpen && (
         <div className={style.categoryBox}>
           {gettingStarted.map((item, index) => (
             <LinkItem
@@ -123,19 +131,19 @@ const style = applyClientStyle({
     cursor: "pointer",
     width: "100%",
     display: "flex",
-    paddingLeft: 32,
+    paddingLeft: 21,
     alignItems: "center",
     borderTop: `solid 1px ${grayColors[6]}`,
     borderBottom: `solid 1px ${grayColors[6]}`,
-    backgroundColor: grayColors[10],
+    backgroundColor: "white",
   },
   title: {
     marginRight: 8,
   },
   categoryBox: {
     height: "100vh",
-    padding: "27px 36px",
-    backgroundColor: grayColors[9],
+    padding: "27px 21px",
+    backgroundColor: "white",
   },
   content: {
     padding: "10px 5px",
@@ -162,6 +170,17 @@ const style = applyClientStyle({
 
 applyClientDarkStyle({
   componentId: "components/Docs/mobilemenu",
+  box: {
+    borderTop: `solid 1px ${grayColors[6]}`,
+    borderBottom: `solid 1px ${grayColors[6]}`,
+    backgroundColor: grayColors[10],
+  },
+  title: {
+    marginRight: 8,
+  },
+  categoryBox: {
+    backgroundColor: grayColors[10],
+  },
   content: {
     color: grayColors[3],
     ":hover": {

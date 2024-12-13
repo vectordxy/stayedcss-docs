@@ -1,8 +1,4 @@
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
-import { cookies } from "next/headers";
-
-const cookieStore = await cookies();
-const mode = cookieStore.get("mode")?.value || "light";
 
 export default function Github() {
   return (
