@@ -43,15 +43,19 @@ const style = st({
   thead: {
     display: "flex",
     padding: "8px 0",
+    borderRadius: 2,
   },
   th1: {
     width: "20%",
+    color: grayColors[3],
   },
   th2: {
     width: "20%",
+    color: grayColors[3],
   },
   th3: {
     width: "60%",
+    color: grayColors[3],
   },
   tr: {
     display: "flex",

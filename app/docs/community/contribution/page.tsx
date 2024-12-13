@@ -5,11 +5,12 @@ import Content from "@/src/components/docs/Content";
 import { st } from "stayedcss";
 import { colors } from "@/src/constants/colors";
 import OpenLink from "@/src/assets/svg/OpenLink";
+import { boldFont } from "@/src/constants/fonts";
 
 export default function page() {
   return (
     <Article title="Contribution">
-      <Section title="Welcome">
+      <Section title="Welcome!">
         Thank you for your interest in contributing to this project! As the sole
         developer of this library, I truly appreciate your support and ideas to
         make it even better. Whether it's fixing a bug, suggesting a feature, or
@@ -27,13 +28,18 @@ export default function page() {
         </Content>
         <GithubCard
           link="https://github.com/vectordxy/stayedcss/issues"
-          projectTitle="stayedcss-docs"
-          description="StayedCSS is a static CSS library designed for Next.js projects. It
-        provides full support for both server and client components, offering
-        various styling features such as pseudo-elements, media queries, and
-        dark mode with no flickering. Additionally, it adopts the same syntax as
-        standard CSS, making it easy to integrate into your projects."
-        />
+          projectTitle="stayedcss"
+        >
+          <div className={style.githubCardContent}>
+            StayedCSS is a static CSS library designed for*Next.js App Router
+            offering full support for both server and client components. With a
+            simple syntax similar to basic CSS, it enables efficient styling and
+            aims to be the next-generation CSS library for the Next.js App
+            Router. Currently in its beta version, StayedCSS is rapidly
+            improving in optimization and stability. It will continue to evolve
+            to deliver a better styling experience for your projects.
+          </div>
+        </GithubCard>
         <div className={style.linkContainer}>
           Please make sure to follow the PR and commit message guidelines when
           contributing.
@@ -70,5 +76,8 @@ const style = st({
   text: {
     marginRight: 4,
     fontSize: 14,
+  },
+  githubCardContent: {
+    padding: "0 12px",
   },
 });

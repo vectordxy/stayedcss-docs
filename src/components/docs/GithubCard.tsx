@@ -4,11 +4,11 @@ import { st, stDark } from "stayedcss";
 export default function GithubCard({
   link,
   projectTitle,
-  description,
+  children,
 }: {
   link: string;
   projectTitle: string;
-  description: string;
+  children: React.ReactNode;
 }) {
   return (
     <div className={style.card}>
@@ -22,7 +22,7 @@ export default function GithubCard({
           </a>
         </div>
       </div>
-      <p className={style.cardDescription}>{description}</p>
+      <p className={style.cardDescription}>{children}</p>
       <div className={style.cardFooter}>
         <a className={style.cardButton} href={link} target="_blank">
           View Code on GitHub

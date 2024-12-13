@@ -16,23 +16,23 @@ export default function page() {
         <CodeBlock language="jsx" code={example} />
       </Section>
       <Section title="Structure">
-        <CodeBlock language="jsx" code={codeExample} />
         <Table />
       </Section>
-      <Section title="Guidelines for Component Id">
-        When creating a component Id in your project, it is recommended to use
-        the current path of the component within your project directory. This
-        approach ensures that the corresponding CSS file is generated in
-        alignment with the component's location, making debugging and
-        maintenance significantly more straightforward. For Example: By
-        following this convention, you can easily locate and manage the
-        generated CSS file for each component. However, this is merely a
-        guideline to enhance organization and efficiency. You are free to define
-        component IDs in any format you prefer, as long as the value provided is
-        a **string type**. **Key Notes**: - Component IDs must be unique within
-        the project to avoid conflicts. - Using meaningful and descriptive IDs
-        improves clarity and helps in debugging. Feel free to adapt this
-        guideline to suit your project's requirements!
+      <Section title="Recommended Component ID Format">
+        <Content title="1. Unique ID">
+          Component IDs must be unique across your project. This is essential
+          because the Component ID serves as the foundation for the generated
+          class names in your styles. Even if multiple components define the
+          same class names within their style objects, their content will not
+          overlap as long as their Component IDs differ.
+        </Content>
+        <Content title="2. File Path">
+          It is highly recommended to use the file path of the component as its
+          ID. This approach allows the library to automatically generate CSS
+          files aligned with the component's location. In case of any errors,
+          this convention makes debugging significantly easier, as you can
+          quickly trace the issue back to the relevant component.
+        </Content>
       </Section>
       <Section title="Syntax">
         <Content title="1. Write styles as object using camelCase">
@@ -51,6 +51,11 @@ export default function page() {
           <List input={unitRequiredProps} />
         </Content>
         <Content title="3. Use strings for multiple values with units">
+          <CodeBlock language="jsx" code={codeExample3} />
+          To define multiple values (e.g., for shorthand properties like
+          padding), use a string and explicitly specify the unit for each value.
+        </Content>
+        <Content title="4. Multiple ClassName">
           <CodeBlock language="jsx" code={codeExample3} />
           To define multiple values (e.g., for shorthand properties like
           padding), use a string and explicitly specify the unit for each value.
