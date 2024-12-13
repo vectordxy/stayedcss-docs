@@ -1,11 +1,10 @@
 export const gettingStarted = ["Introduction", "Installation"];
-export const setUp = ["Server Components", "Client Components"];
+export const setUp = ["Basic Styles", "Styles with Use Client"];
 export const styles = [
-  "Basic Styles",
+  "Media Query",
+  "Dark Mode",
   "Pseudo Classes",
   "Pseudo Elements",
   "Combinators",
-  "Media Query",
-  "Dark Mode",
 ];
 export const community = ["Preview Code", "Contribution"];

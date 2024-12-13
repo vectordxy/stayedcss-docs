@@ -52,7 +52,7 @@ const style = st({
   },
   box: {
     width: "100%",
-    padding: "0 27px",
+    padding: "0 36px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -67,7 +67,7 @@ const style = st({
   },
   beta: {
     fontSize: 12,
-    margin: 6,
+    marginLeft: 6,
     paddingTop: 1,
   },
   linkItems: {
@@ -83,10 +83,17 @@ const style = st({
     },
   },
   "@laptop": {
+    title: {
+      fontSize: 16,
+    },
+    beta: {
+      fontSize: 12,
+    },
     box: {
       padding: "0 21px",
     },
     linkItem: {
+      fontSize: 11,
       marginLeft: 15,
     },
   },

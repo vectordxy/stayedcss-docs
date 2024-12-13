@@ -109,7 +109,7 @@ const style = stClient({
     top: "70px",
     fontSize: 14,
     padding: "16px 0",
-    height: 600,
+    height: 500,
   },
   box: {
     padding: "6px 27px",

@@ -4,7 +4,7 @@ import Section from "@/src/components/docs/Section";
 
 export default function page() {
   return (
-    <Article title="Client Components">
+    <Article title="Styles with use client">
       <Section title="1. Create an API">
         First, start by creating a file named app/api/client-style. This file
         acts as a Next.js API route and uses the postStyles function to handle

@@ -3,6 +3,7 @@ import Section from "@/src/components/docs/Section";
 import CodeBlock from "@/src/components/docs/CodeBlock";
 import Content from "@/src/components/docs/Content";
 import List from "@/src/components/docs/List";
+import Table from "@/src/components/docs/Table";
 
 export default function page() {
   return (
@@ -12,7 +13,26 @@ export default function page() {
         intuitive way, similar to writing traditional CSS. Instead of writing
         styles in a .css file, you define them as JavaScript objects. This keeps
         your styles co-located with your component logic.
+        <CodeBlock language="jsx" code={example} />
+      </Section>
+      <Section title="Structure">
         <CodeBlock language="jsx" code={codeExample} />
+        <Table />
+      </Section>
+      <Section title="Guidelines for Component Id">
+        When creating a component Id in your project, it is recommended to use
+        the current path of the component within your project directory. This
+        approach ensures that the corresponding CSS file is generated in
+        alignment with the component's location, making debugging and
+        maintenance significantly more straightforward. For Example: By
+        following this convention, you can easily locate and manage the
+        generated CSS file for each component. However, this is merely a
+        guideline to enhance organization and efficiency. You are free to define
+        component IDs in any format you prefer, as long as the value provided is
+        a **string type**. **Key Notes**: - Component IDs must be unique within
+        the project to avoid conflicts. - Using meaningful and descriptive IDs
+        improves clarity and helps in debugging. Feel free to adapt this
+        guideline to suit your project's requirements!
       </Section>
       <Section title="Syntax">
         <Content title="1. Write styles as object using camelCase">
@@ -39,6 +59,32 @@ export default function page() {
     </Article>
   );
 }
+
+const example = `import { st } from "stayedcss";
+
+export default function Article() {
+  return (
+    <div className={style.container}>
+      <div className={style.title}>title</div>
+      <div className={style.content}>content</div>
+    </div>
+  );
+}
+
+const style = st({
+  componentId: "components/docs/article",
+  container: {
+    marginBottom: 60,
+  },
+  title:{
+    fontSize: 27,
+  },
+  content: {
+    marginTop: 32,
+    lineHeight: "1.5em",
+  },
+});
+`;
 
 const codeExample = `const style = st({
   componentId: "components/docs/basic-styles",

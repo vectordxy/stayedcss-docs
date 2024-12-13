@@ -35,9 +35,6 @@ const style = st({
     display: "flex",
     paddingTop: 70,
   },
-  sidemenu: {
-    display: "inline-block",
-  },
   layout: {
     width: "100%",
     display: "flex",
