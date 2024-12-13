@@ -1,5 +1,6 @@
 import { applyStyle } from "@/src/utils/getModule";
 import SideMenu from "@/src/components/docs/SideMenu";
+import MobileMenu from "@/src/components/docs/MobileMenu";
 
 export default async function DocsLayout({
   children,
@@ -8,6 +9,7 @@ export default async function DocsLayout({
 }) {
   return (
     <div className={style.container}>
+      <MobileMenu />
       <div className={style.box}>
         <div className={style.sidemenu}>
           <SideMenu />
@@ -61,6 +63,9 @@ const style = applyStyle({
     },
     box: {
       padding: "70px 32px",
+    },
+    layout: {
+      paddingTop: 84,
     },
     sidemenu: {
       display: "none",

@@ -1,0 +1,8 @@
+.selectedContent-components-docs-mobilemenu { padding: 6px 3px; display: block; cursor: pointer; color: #9f7d60;  }
+.content-components-docs-mobilemenu:hover { color: #9f7d60; } 
+.content-components-docs-mobilemenu { padding: 10px 5px; display: block; cursor: pointer;  }
+.categoryBox-components-docs-mobilemenu { height: 100vh; padding: 27px 36px; background-color: #242424;  }
+.title-components-docs-mobilemenu { margin-right: 8px;  }
+.box-components-docs-mobilemenu { height: 60px; cursor: pointer; width: 100%; display: flex; padding-left: 32px; align-items: center; border-top: solid 1px #707070; border-bottom: solid 1px #707070; background-color: #151515;  }
+.container-components-docs-mobilemenu { z-index: 50; display: none; position: fixed; top: 70px; width: 100%;  }
+@media (max-width: 1024px) { .container-components-docs-mobilemenu { display: flex; flex-direction: column; justify-content: center;  } } 

@@ -10,18 +10,12 @@ import {
 } from "@/src/utils/getClientModule";
 import { colors, grayColors } from "@/src/constants/colors";
 import { boldFont } from "@/src/constants/fonts";
-
-const gettingStarted = ["Introduction", "Installation"];
-const setUp = ["Server Components", "Client Components", "Types"];
-const styles = [
-  "Basic Styles",
-  "Pseudo Classes",
-  "Pseudo Elements",
-  "Combinators",
-  "Media Query",
-  "Dark Mode",
-];
-const community = ["Preview Code", "Contribution"];
+import {
+  community,
+  gettingStarted,
+  setUp,
+  styles,
+} from "@/src/constants/category";
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");

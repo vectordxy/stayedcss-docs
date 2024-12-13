@@ -4,4 +4,4 @@
 .box-components-docs-layout { width: 1180px; display: flex; padding-top: 70px;  }
 .container-components-docs-layout { display: flex; justify-content: center; padding-bottom: 100px; padding-right: 36px;  }
 @media (max-width: 1280px) { .box-components-docs-layout { width: 100%;  } .frame-components-docs-layout { line-height: 1.5em; min-width: 100%;  } } 
-@media (max-width: 1024px) { .container-components-docs-layout { padding-right: 0px;  } .box-components-docs-layout { padding: 70px 32px;  } .sidemenu-components-docs-layout { display: none;  } } 
+@media (max-width: 1024px) { .container-components-docs-layout { padding-right: 0px;  } .box-components-docs-layout { padding: 70px 32px;  } .layout-components-docs-layout { padding-top: 84px;  } .sidemenu-components-docs-layout { display: none;  } } 
