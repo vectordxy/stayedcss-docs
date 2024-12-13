@@ -1,4 +1,4 @@
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { st, stDark } from "stayedcss";
 import { grayColors } from "@/src/constants/colors";
 
 export default function List({ input }: { input: string[] }) {
@@ -13,7 +13,7 @@ export default function List({ input }: { input: string[] }) {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/docs/list",
   container: {
     display: "flex",
@@ -30,7 +30,7 @@ const style = applyStyle({
   },
 });
 
-applyDarkStyle({
+stDark({
   componentId: "components/docs/list",
   item: {
     backgroundColor: grayColors[9],

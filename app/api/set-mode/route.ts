@@ -1,6 +1,6 @@
-import { setModeServer } from "@/src/utils/getClientModule";
+import { saveScreenMode } from "stayedcss/client";
 
 export async function POST(request: Request) {
   const { mode } = await request.json();
-  return setModeServer(mode);
+  return saveScreenMode(mode);
 }

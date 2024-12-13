@@ -4,10 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import {
-  applyClientDarkStyle,
-  applyClientStyle,
-} from "@/src/utils/getClientModule";
 import { ArrowDropDown, ArrowDropUp } from "@/src/assets/svg/ArrowDrop";
 import { colors, grayColors } from "@/src/constants/colors";
 import {
@@ -16,6 +12,7 @@ import {
   setUp,
   styles,
 } from "@/src/constants/category";
+import { stClient, stClientDark } from "stayedcss/client";
 
 const convertToTitleCase = (str: string): string => {
   return str
@@ -117,13 +114,14 @@ function LinkItem({
   );
 }
 
-const style = applyClientStyle({
+const style = stClient({
   componentId: "components/Docs/mobilemenu",
   container: {
     zIndex: 50,
     display: "none",
     position: "fixed",
     top: 70,
+    backgroundColor: grayColors[0],
     width: "100%",
   },
   box: {
@@ -135,7 +133,7 @@ const style = applyClientStyle({
     alignItems: "center",
     borderTop: `solid 1px ${grayColors[6]}`,
     borderBottom: `solid 1px ${grayColors[6]}`,
-    backgroundColor: "white",
+    backgroundColor: grayColors[0],
   },
   title: {
     marginRight: 8,
@@ -143,7 +141,7 @@ const style = applyClientStyle({
   categoryBox: {
     height: "100vh",
     padding: "27px 21px",
-    backgroundColor: "white",
+    backgroundColor: grayColors[0],
   },
   content: {
     padding: "10px 5px",
@@ -168,7 +166,7 @@ const style = applyClientStyle({
   },
 });
 
-applyClientDarkStyle({
+stClientDark({
   componentId: "components/Docs/mobilemenu",
   box: {
     borderTop: `solid 1px ${grayColors[6]}`,

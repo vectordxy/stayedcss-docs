@@ -1,5 +1,5 @@
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import Github from "@/src/assets/svg/Github";
+import { st, stDark } from "stayedcss";
 
 export default function GithubCard({
   link,
@@ -32,8 +32,8 @@ export default function GithubCard({
   );
 }
 
-const style = applyStyle({
-  componentId: "components/community/previewcode",
+const style = st({
+  componentId: "components/community/preview-code",
   card: {
     borderRadius: 3,
     padding: "21px 23px 27px 23px",
@@ -83,8 +83,8 @@ const style = applyStyle({
   },
 });
 
-applyDarkStyle({
-  componentId: "components/community/previewcode",
+stDark({
+  componentId: "components/community/preview-code",
   card: {
     backgroundColor: "#161b22",
     color: "#c9d1d9",

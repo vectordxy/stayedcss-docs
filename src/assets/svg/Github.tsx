@@ -1,4 +1,4 @@
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { st, stDark } from "stayedcss";
 
 export default function Github() {
   return (
@@ -15,14 +15,14 @@ export default function Github() {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "src/svg/github",
   icon: {
     fill: "black",
   },
 });
 
-applyDarkStyle({
+stDark({
   componentId: "src/svg/github",
   icon: {
     fill: "#c9d1d9",

@@ -5,9 +5,9 @@ import "./globals.css";
 import NavBar from "../src/components/global/NavBar";
 import Footer from "../src/components/global/Footer";
 
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import { regularFont } from "../src/constants/fonts";
 import { grayColors } from "@/src/constants/colors";
+import { st, stDark } from "stayedcss";
 
 export const metadata: Metadata = {
   title: "stayedcss",
@@ -37,15 +37,15 @@ export default async function RootLayout({
   );
 }
 
-const style = applyStyle({
-  componentId: "RootLayout",
+const style = st({
+  componentId: "rootlayout",
   container: {
     color: grayColors[10],
     backgroundColor: grayColors[0],
   },
 });
 
-applyDarkStyle({
+stDark({
   componentId: "RootLayout",
   container: {
     color: grayColors[2],

@@ -5,9 +5,9 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import { applyClientStyle } from "@/src/utils/getClientModule";
 import Copy from "@/src/assets/svg/Copy";
 import Check from "@/src/assets/svg/Check";
+import { stClient } from "stayedcss/client";
 
 export default function CodeBlock({
   language,
@@ -54,7 +54,7 @@ export default function CodeBlock({
   );
 }
 
-const style = applyClientStyle({
+const style = stClient({
   componentId: "components/docs/CodeBlock",
   container: {
     position: "relative",

@@ -1,4 +1,14 @@
-.children-components-docs-section { margin: 12px 0;  }
-.title-components-docs-section { font-size: 24px;  }
-.container-components-docs-section { margin: 48px 0;  }
-@media (max-width: 800px) { .title-components-docs-section { font-size: 18px;  } } 
+.children-components-docs-section {
+  margin: 12px 0;
+}
+.title-components-docs-section {
+  font-size: 24px;
+}
+.container-components-docs-section {
+  margin: 48px 0;
+}
+@media (max-width: 800px) {
+  .title-components-docs-section {
+    font-size: 18px;
+  }
+}

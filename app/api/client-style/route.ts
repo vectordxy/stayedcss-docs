@@ -1,5 +1,5 @@
-import { postStyles } from "@/src/utils/getModule";
+import { requestStyles } from "stayedcss";
 
 export function POST(request: Request) {
-  return postStyles(request);
+  return requestStyles(request);
 }

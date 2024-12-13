@@ -1,21 +1,21 @@
-@import "./style-src/svg/arrowdropdown/style.css";
 @import "./style-components/docs/mobilemenu/style.css";
-@import "./style-app/docs/contribution/style.css";
-@import "./style-components/docs/content/style.css";
-@import "./style-src/svg/github/style.css";
-@import "./style-components/community/previewcode/style.css";
+@import "./style-components/community/preview-code/style.css";
 @import "./style-components/docs/list/style.css";
+@import "./style-app/docs/contribution/style.css";
+
+@import "./style-components/docs/content/style.css";
+@import "./style-components/docs/sidemenu/style.css";
 @import "./style-components/docs/article/style.css";
 @import "./style-components/docs/codeblock/style.css";
 @import "./style-components/docs/layout/style.css";
 @import "./style-components/docs/section/style.css";
-@import "./style-components/docs/sidemenu/style.css";
 
 @import "./style-components/global/footer/style.css";
 @import "./style-components/global/modebutton/style.css";
 @import "./style-components/global/navbar/style.css";
 
 @import "./style-components/home/mainpage/style.css";
-@import "./style-rootlayout/style.css";
+
+@import "./style-src/svg/arrowdropdown/style.css";
 
 @import "./darkmode.css";

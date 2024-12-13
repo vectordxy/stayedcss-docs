@@ -1,0 +1,6 @@
+.dark .cardButton-components-community-preview-code:hover { background-color: #30363d; } 
+.dark .cardButton-components-community-preview-code { color: white; background-color: #21262d;  }
+.dark .cardDescription-components-community-preview-code { color: #8b949e; background: linear-gradient(180deg, #8b949e 60%, rgba(139, 148, 158, 0) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  }
+.dark .cardTitle-components-community-preview-code:hover { text-decoration: underline; } 
+.dark .cardTitle-components-community-preview-code { color: #58a6ff;  }
+.dark .card-components-community-preview-code { background-color: #161b22; color: #c9d1d9;  }

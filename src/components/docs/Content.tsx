@@ -1,5 +1,5 @@
-import { applyStyle } from "@/src/utils/getModule";
 import { boldFont } from "@/src/constants/fonts";
+import { st } from "stayedcss";
 
 export default function Content({
   title,
@@ -16,7 +16,7 @@ export default function Content({
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/docs/content",
   container: {
     margin: "12px 0",

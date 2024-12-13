@@ -1,5 +1,5 @@
-import { applyStyle } from "@/src/utils/getModule";
 import { grayColors } from "@/src/constants/colors";
+import { st } from "stayedcss";
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/global/footer",
   container: {
     width: "100%",

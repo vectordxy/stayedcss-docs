@@ -1,5 +1,5 @@
-import { applyStyle } from "@/src/utils/getModule";
 import { boldFont } from "@/src/constants/fonts";
+import { st } from "stayedcss";
 
 export default function Article({
   title,
@@ -16,7 +16,7 @@ export default function Article({
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/Docs/Article",
   title: {
     fontSize: 36,

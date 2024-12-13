@@ -4,10 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import {
-  applyClientDarkStyle,
-  applyClientStyle,
-} from "@/src/utils/getClientModule";
 import { colors, grayColors } from "@/src/constants/colors";
 import { boldFont } from "@/src/constants/fonts";
 import {
@@ -16,6 +12,8 @@ import {
   setUp,
   styles,
 } from "@/src/constants/category";
+
+import { stClient, stClientDark } from "stayedcss/client";
 
 const makeLowerCase = (str: string) => {
   return str.toLowerCase().replaceAll(" ", "-");
@@ -103,8 +101,8 @@ function LinkItem({
   );
 }
 
-const style = applyClientStyle({
-  componentId: "components/Docs/SideMenu",
+const style = stClient({
+  componentId: "components/docs/sidemenu",
   container: {
     width: 270,
     position: "sticky",
@@ -136,8 +134,8 @@ const style = applyClientStyle({
   },
 });
 
-applyClientDarkStyle({
-  componentId: "components/Docs/SideMenu",
+stClientDark({
+  componentId: "components/docs/sidemenu",
   content: {
     color: grayColors[3],
     ":hover": {

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
 import { boldFont, lightFont } from "@/src/constants/fonts";
 import { grayColors } from "@/src/constants/colors";
+import { st, stDark } from "stayedcss";
 
 export default function MainPage() {
   return (
@@ -28,7 +28,7 @@ export default function MainPage() {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/Home/MainPage",
   container: {
     height: "100vh",
@@ -89,7 +89,7 @@ const style = applyStyle({
   },
 });
 
-applyDarkStyle({
+stDark({
   componentId: "components/Home/MainPage",
   startButton: {
     backgroundColor: grayColors[8],

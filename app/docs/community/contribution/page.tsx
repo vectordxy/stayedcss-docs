@@ -2,7 +2,7 @@ import Article from "@/src/components/docs/Article";
 import Section from "@/src/components/docs/Section";
 import GithubCard from "@/src/components/docs/GithubCard";
 import Content from "@/src/components/docs/Content";
-import { applyStyle } from "@/src/utils/getModule";
+import { st } from "stayedcss";
 import { colors } from "@/src/constants/colors";
 import OpenLink from "@/src/assets/svg/OpenLink";
 
@@ -56,7 +56,7 @@ export default function page() {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "app/docs/contribution",
   linkContainer: {
     display: "flex",

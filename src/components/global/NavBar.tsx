@@ -2,10 +2,10 @@ import Link from "next/link";
 
 import ModeButton from "./ModeButton";
 
-import { applyDarkStyle, applyStyle } from "../../utils/getModule";
 import { projectTitle } from "@/src/constants/title";
 import { boldFont, lightFont } from "@/src/constants/fonts";
 import { colors, grayColors } from "@/src/constants/colors";
+import { st, stDark } from "stayedcss";
 
 export default function NavBar() {
   return (
@@ -38,7 +38,7 @@ export default function NavBar() {
   );
 }
 
-const style = applyStyle({
+const style = st({
   componentId: "components/Global/NavBar",
   container: {
     zIndex: 100,
@@ -92,7 +92,7 @@ const style = applyStyle({
   },
 });
 
-applyDarkStyle({
+stDark({
   componentId: "components/Global/NavBar",
   container: {
     backgroundColor: grayColors[10],

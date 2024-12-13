@@ -1,4 +1,4 @@
-import { applyStyle } from "@/src/utils/getModule";
+import { st } from "stayedcss";
 import SideMenu from "@/src/components/docs/SideMenu";
 import MobileMenu from "@/src/components/docs/MobileMenu";
 
@@ -22,8 +22,8 @@ export default async function DocsLayout({
   );
 }
 
-const style = applyStyle({
-  componentId: "components/Docs/Layout",
+const style = st({
+  componentId: "components/docs/layout",
   container: {
     display: "flex",
     justifyContent: "center",
@@ -62,7 +62,7 @@ const style = applyStyle({
       paddingRight: 0,
     },
     box: {
-      padding: "70px 21px",
+      width: "90%",
     },
     layout: {
       paddingTop: 84,

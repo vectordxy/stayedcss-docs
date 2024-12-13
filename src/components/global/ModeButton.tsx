@@ -1,21 +1,23 @@
 "use client";
 
-import {
-  applyClientDarkStyle,
-  applyClientStyle,
-  changeMode,
-} from "../../utils/getClientModule";
 import { grayColors } from "@/src/constants/colors";
 import { DarkMode, LightMode } from "@/src/assets/svg/Mode";
+import { changeScreenMode, stClient, stClientDark } from "stayedcss/client";
 
 export default function ModeButton() {
   return (
     <div className={style.container}>
       <div className={style.buttonContainer}>
-        <button className={style.button} onClick={() => changeMode("light")}>
+        <button
+          className={style.button}
+          onClick={() => changeScreenMode("light")}
+        >
           <LightMode size={15} />
         </button>
-        <button className={style.button} onClick={() => changeMode("dark")}>
+        <button
+          className={style.button}
+          onClick={() => changeScreenMode("dark")}
+        >
           <DarkMode size={15} />
         </button>
       </div>
@@ -23,7 +25,7 @@ export default function ModeButton() {
   );
 }
 
-const style = applyClientStyle({
+const style = stClient({
   componentId: "components/global/ModeButton",
   container: {
     display: "flex",
@@ -49,7 +51,7 @@ const style = applyClientStyle({
   },
 });
 
-applyClientDarkStyle({
+stClientDark({
   componentId: "components/global/ModeButton",
   button: {
     backgroundColor: grayColors[8],

@@ -1,0 +1,8 @@
+.cardButton-components-community-preview-code:hover { background-color: #218838; } 
+.cardButton-components-community-preview-code { padding: 10px 18px; font-size: 12px; font-weight: bold; color: white; background-color: #28a745; border: none; border-radius: 3px; cursor: pointer;  }
+.cardFooter-components-community-preview-code { text-align: center;  }
+.cardDescription-components-community-preview-code { font-size: 14px; color: #586069; margin-bottom: 20px; background: linear-gradient(180deg, #586069 60%, rgba(88, 96, 105, 0) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  }
+.cardTitle-components-community-preview-code:hover { text-decoration: underline; } 
+.cardTitle-components-community-preview-code { font-size: 18px; font-weight: bold; text-decoration: none; color: #0366d6; margin-left: 10px;  }
+.cardHeader-components-community-preview-code { display: flex;  }
+.card-components-community-preview-code { border-radius: 3px; padding: 21px 23px 27px 23px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); font-family: Arial, sans-serif; margin-top: 12px; margin-bottom: 28px;  }

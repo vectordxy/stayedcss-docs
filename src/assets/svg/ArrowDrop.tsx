@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  applyClientDarkStyle,
-  applyClientStyle,
-} from "@/src/utils/getClientModule";
+import { stClient, stClientDark } from "stayedcss/client";
 
 export function ArrowDropDown() {
   return (
@@ -31,14 +28,14 @@ export function ArrowDropUp() {
   );
 }
 
-const style = applyClientStyle({
+const style = stClient({
   componentId: "src/svg/arrowdropdown",
   icon: {
     fill: "black",
   },
 });
 
-applyClientDarkStyle({
+stClientDark({
   componentId: "src/svg/arrowdropdown",
   icon: {
     fill: "#d5d5d5",
