@@ -38,7 +38,7 @@ export default async function RootLayout({
 }
 
 const style = st({
-  componentId: "rootlayout",
+  componentId: "root/layout",
   container: {
     color: grayColors[10],
     backgroundColor: grayColors[0],
@@ -46,7 +46,7 @@ const style = st({
 });
 
 stDark({
-  componentId: "RootLayout",
+  componentId: "root/layout",
   container: {
     color: grayColors[2],
     backgroundColor: grayColors[10],
