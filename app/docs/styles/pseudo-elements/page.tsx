@@ -21,8 +21,8 @@ export default function page() {
   );
 }
 
-const codeExample = `const style = stayedcss({
-  componentId: "components/docs/pseudo-elements-example",
+const codeExample = `const style = st({
+  componentId: "components/docs/pseudo-elements",
   container: {
     position: "relative",
     "::before": {

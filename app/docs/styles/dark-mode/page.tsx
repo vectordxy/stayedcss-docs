@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 }
 `;
 
-const codeServer = `import { stayedcss, stayedcssDark } from "stayedcss";
+const codeServer = `import { st, stDark } from "stayedcss";
 
 export default function DarkModeExample() {
   return (
@@ -75,15 +75,17 @@ export default function DarkModeExample() {
   );
 }
 
-const style = stayedcss({
+const style = st({
   componentId: "component/darkmode-example",
   container: {
     backgroundColor: "white",
   },
 });
 
-stayedcssDark({
-  componentId: "component/darkmode-example", // same componentId with lightmode.
+// apply DarkMode
+// same componentId with lightmode.
+stDark({
+  componentId: "component/darkmode-example",
   container: {
     backgroundColor: "black",
   },
@@ -92,7 +94,7 @@ stayedcssDark({
 
 const codeClient = `"use client";
 
-import { stayedcssClient, stayedcssClientDark } from "stayedcss/client";
+import { stClient, stClientDark } from "stayedcss/client";
 
 export default function DarkModeClientExample() {
   return (
@@ -102,15 +104,17 @@ export default function DarkModeClientExample() {
   );
 }
 
-const style = stayedcssClient({
+const style = stClient({
   componentId: "component/darkmode-client-example",
   container: {
     backgroundColor: "white",
   },
 });
 
-stayedcssClientDark({
-  componentId: "component/darkmode-client-example", // same componentId with lightmode.
+// apply DarkMode
+// same componentId with lightmode.
+stClientDark({
+  componentId: "component/darkmode-client-example", 
   container: {
     backgroundColor: "black",
   },

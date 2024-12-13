@@ -11,7 +11,7 @@ export default function page() {
   );
 }
 
-const example = `import { stayedcss } from "stayedcss";
+const example = `import { st } from "stayedcss";
 
 export default function Article() {
   return (
@@ -22,7 +22,7 @@ export default function Article() {
   );
 }
 
-const style = stayedcss({
+const style = st({
   componentId: "components/docs/article",
   container: {
     marginBottom: 60,

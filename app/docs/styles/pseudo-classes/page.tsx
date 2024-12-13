@@ -19,8 +19,8 @@ export default function page() {
   );
 }
 
-const codeExample = `const style = stayedcss({
-  componentId: "components/docs/article",
+const codeExample = `const style = st({
+  componentId: "components/docs/pseudo-classes",
   container: {
     backgroundColor: "black",
     ":hover":{

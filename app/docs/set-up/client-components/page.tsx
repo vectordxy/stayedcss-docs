@@ -23,16 +23,15 @@ export default function page() {
 }
 
 const postExample = `// app/api/client-style
-import { postStyles } from "stayedcss";
+import { requestStyles } from "stayedcss";
 
-export async function POST(request: Request) {
-  return await postStyles(request);
-}
-`;
+export function POST(request: Request) {
+  return requestStyles(request);
+}`;
 
 const componentExample = `'use client'
 
-import { stayedcssClient } from "stayedcss/client";
+import { stClient } from "stayedcss/client";
 
 export default function ArticleClient() {
   return (
@@ -43,7 +42,7 @@ export default function ArticleClient() {
   );
 }
 
-const style = stayedcssClient({
+const style = stClient({
   componentId: "components/docs/article-client",
   container: {
     marginBottom: 60,

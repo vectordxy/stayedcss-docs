@@ -46,7 +46,7 @@ export default function page() {
   );
 }
 
-const code1 = `const style = stayedcss({
+const code1 = `const style = st({
   componentId: "components/global/footer",
   container: {
     width: "100%",
@@ -62,7 +62,7 @@ const code1 = `const style = stayedcss({
 });
     `;
 
-const code2 = `const style = stayedcss({
+const code2 = `const style = st({
   componentId: "components/global/footer",
   container: {
     display: "flex",

@@ -19,8 +19,8 @@ export default function page() {
   );
 }
 
-const codeExample = `const style = stayedcss({
-  componentId: "components/docs/selector-example",
+const codeExample = `const style = st({
+  componentId: "components/docs/combinators",
   container: {
     display: "flex",
     flexDirection: "column",

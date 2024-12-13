@@ -19,8 +19,8 @@ export default function page() {
   );
 }
 
-const codeExample = `const style = stayedcss({
-  componentId: "components/docs/media-query-example",
+const codeExample = `const style = st({
+  componentId: "components/docs/media-query",
   container: {
     display: "flex",
     justifyContent: "center",

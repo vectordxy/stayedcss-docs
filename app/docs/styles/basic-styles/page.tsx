@@ -40,8 +40,8 @@ export default function page() {
   );
 }
 
-const codeExample = `const style = stayedcss({
-  componentId: "components/docs/article",
+const codeExample = `const style = st({
+  componentId: "components/docs/basic-styles",
   container: {
     backgroundColor: "black",
   },
