@@ -17,7 +17,7 @@ const styles = [
   "Basic Styles",
   "Pseudo Classes",
   "Pseudo Elements",
-  "Selectors",
+  "Combinators",
   "Media Query",
   "Dark Mode",
 ];

@@ -46,7 +46,12 @@ export default async function RootLayout({
   const mode = cookieStore.get("mode")?.value || "light";
 
   return (
-  // your code
+    <html>
+      { /* add className={mode} in body tag */ }
+      <body className={mode}>
+        {children}
+      </body>
+    </html>
   );
 }
 `;

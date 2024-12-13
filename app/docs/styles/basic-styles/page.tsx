@@ -2,6 +2,7 @@ import Article from "@/src/components/docs/Article";
 import Section from "@/src/components/docs/Section";
 import CodeBlock from "@/src/components/docs/CodeBlock";
 import Content from "@/src/components/docs/Content";
+import List from "@/src/components/docs/List";
 
 export default function page() {
   return (
@@ -25,6 +26,9 @@ export default function page() {
           interpreted as pixels. When a numeric value is provided without a
           unit, it is automatically interpreted as pixels. If you want to
           specify a different unit, provide the value as a string.
+        </Content>
+        <Content title="Available Properties for Default px">
+          <List input={unitRequiredProps} />
         </Content>
         <Content title="3. Use strings for multiple values with units">
           <CodeBlock language="jsx" code={codeExample3} />
@@ -64,3 +68,42 @@ const codeExample3 = `content: {
   margin: "16px 12px",
   padding: "12px 8px 16px 2px",
 },`;
+
+const unitRequiredProps = [
+  "width",
+  "height",
+  "min-width",
+  "max-width",
+  "min-height",
+  "max-height",
+  "margin",
+  "margin-top",
+  "margin-right",
+  "margin-bottom",
+  "margin-left",
+  "padding",
+  "padding-top",
+  "padding-right",
+  "padding-bottom",
+  "padding-left",
+  "font-size",
+  "top",
+  "right",
+  "bottom",
+  "left",
+  "inset",
+  "inset-block",
+  "inset-inline",
+  "border-width",
+  "border-radius",
+  "border-top-width",
+  "border-right-width",
+  "border-bottom-width",
+  "border-left-width",
+  "outline-width",
+  "grid-gap",
+  "grid-row-gap",
+  "grid-column-gap",
+  "flex-basis",
+  "backdrop-filter",
+];

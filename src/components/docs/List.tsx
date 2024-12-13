@@ -18,11 +18,11 @@ const style = applyStyle({
   container: {
     display: "flex",
     flexWrap: "wrap",
-    gap: "12px",
+    gap: "6px",
     margin: "16px 0",
   },
   item: {
-    fontSize: 14,
+    fontSize: 12,
     padding: "4px 8px",
     backgroundColor: grayColors[1],
     borderRadius: 2,
