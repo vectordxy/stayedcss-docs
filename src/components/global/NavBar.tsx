@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { boldFont, lightFont } from "@/src/utils/fonts";
+
 import ModeButton from "./ModeButton";
-import { colors, grayColors, projectTitle } from "../../utils/constant";
+
 import { applyDarkStyle, applyStyle } from "../../utils/getModule";
+import { projectTitle } from "@/src/constants/title";
+import { boldFont, lightFont } from "@/src/constants/fonts";
+import { colors, grayColors } from "@/src/constants/colors";
 
 export default function NavBar() {
   return (

@@ -3,7 +3,7 @@ import Section from "@/src/components/docs/Section";
 import GithubCard from "@/src/components/docs/GithubCard";
 import Content from "@/src/components/docs/Content";
 import { applyStyle } from "@/src/utils/getModule";
-import { colors, grayColors } from "@/src/utils/constant";
+import { colors } from "@/src/constants/colors";
 import OpenLink from "@/src/assets/svg/OpenLink";
 
 export default function page() {

@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
-import { boldFont, lightFont } from "@/src/utils/fonts";
-import { grayColors } from "@/src/utils/constant";
+import { boldFont, lightFont } from "@/src/constants/fonts";
+import { grayColors } from "@/src/constants/colors";
 
 export default function MainPage() {
   return (

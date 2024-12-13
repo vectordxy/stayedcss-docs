@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { colors, grayColors } from "@/src/utils/constant";
-import { boldFont } from "@/src/utils/fonts";
+import { colors, grayColors } from "@/src/constants/colors";
+import { boldFont } from "@/src/constants/fonts";
 import {
   applyClientDarkStyle,
   applyClientStyle,

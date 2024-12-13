@@ -1,18 +1,19 @@
-import type { Metadata } from "next";
 import { cookies } from "next/headers";
+
 import "./globals.css";
 import NavBar from "../src/components/global/NavBar";
-import { regularFont } from "../src/utils/fonts";
 import Footer from "../src/components/global/Footer";
-import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
-import { grayColors } from "@/src/utils/constant";
 
-export const metadata: Metadata = {
-  title: "stayedcss",
-  icons: {
-    icon: "/icon.png",
-  },
-};
+import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { regularFont } from "../src/constants/fonts";
+import { grayColors } from "@/src/constants/colors";
+
+// const metadata: Metadata = {
+//   title: "stayedcss",
+//   icons: {z
+//     icon: "/icon.png",
+//   },
+// };
 
 export default async function RootLayout({
   children,

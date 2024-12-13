@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { boldFont } from "@/src/utils/fonts";
+import { boldFont } from "@/src/constants/fonts";
 import { applyStyle } from "@/src/utils/getModule";
 
 export default function Article({

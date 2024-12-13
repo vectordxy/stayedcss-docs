@@ -6,7 +6,7 @@ import {
   applyClientStyle,
   changeMode,
 } from "../../utils/getClientModule";
-import { grayColors } from "@/src/utils/constant";
+import { grayColors } from "@/src/constants/colors";
 
 export default function ModeButton() {
   return (
