@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import { applyClientStyle } from "@/src/utils/getClientModule";
 import Copy from "@/src/assets/svg/Copy";
 import Check from "@/src/assets/svg/Check";

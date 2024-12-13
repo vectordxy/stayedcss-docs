@@ -1,13 +1,12 @@
-import { ReactNode } from "react";
-import { boldFont } from "@/src/constants/fonts";
 import { applyStyle } from "@/src/utils/getModule";
+import { boldFont } from "@/src/constants/fonts";
 
 export default function Article({
   title,
   children,
 }: {
   title: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <div>

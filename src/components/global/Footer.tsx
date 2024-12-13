@@ -1,6 +1,5 @@
-import { grayColors } from "@/src/constants/colors";
-import { applyClientDarkStyle } from "@/src/utils/getClientModule";
 import { applyStyle } from "@/src/utils/getModule";
+import { grayColors } from "@/src/constants/colors";
 
 export default function Footer() {
   return (

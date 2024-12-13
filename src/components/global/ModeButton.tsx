@@ -1,12 +1,12 @@
 "use client";
 
-import { DarkMode, LightMode } from "@/src/assets/svg/Mode";
 import {
   applyClientDarkStyle,
   applyClientStyle,
   changeMode,
 } from "../../utils/getClientModule";
 import { grayColors } from "@/src/constants/colors";
+import { DarkMode, LightMode } from "@/src/assets/svg/Mode";
 
 export default function ModeButton() {
   return (

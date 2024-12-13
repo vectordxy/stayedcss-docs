@@ -1,5 +1,5 @@
-import { colors, grayColors } from "@/src/constants/colors";
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import { grayColors } from "@/src/constants/colors";
 
 export default function List({ input }: { input: string[] }) {
   return (

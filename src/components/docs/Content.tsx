@@ -1,5 +1,5 @@
-import { boldFont } from "@/src/constants/fonts";
 import { applyStyle } from "@/src/utils/getModule";
+import { boldFont } from "@/src/constants/fonts";
 
 export default function Content({
   title,

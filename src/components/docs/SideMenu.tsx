@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { colors, grayColors } from "@/src/constants/colors";
-import { boldFont } from "@/src/constants/fonts";
+import { useEffect, useState } from "react";
+
 import {
   applyClientDarkStyle,
   applyClientStyle,
 } from "@/src/utils/getClientModule";
+import { colors, grayColors } from "@/src/constants/colors";
+import { boldFont } from "@/src/constants/fonts";
 
 const gettingStarted = ["Introduction", "Installation"];
 const setUp = ["Server Components", "Client Components", "Types"];

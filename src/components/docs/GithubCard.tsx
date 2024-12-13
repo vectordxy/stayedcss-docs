@@ -1,5 +1,5 @@
-import Github from "@/src/assets/svg/Github";
 import { applyDarkStyle, applyStyle } from "@/src/utils/getModule";
+import Github from "@/src/assets/svg/Github";
 
 export default function GithubCard({
   link,
