@@ -7,4 +7,4 @@ export const styles = [
   "Pseudo Elements",
   "Combinators",
 ];
-export const community = ["Preview Code", "Contribution"];
+export const community = ["Contribution", "Preview Code"];

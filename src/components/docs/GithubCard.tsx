@@ -22,7 +22,7 @@ export default function GithubCard({
           </a>
         </div>
       </div>
-      <p className={style.cardDescription}>{children}</p>
+      <div className={style.cardDescription}>{children}</div>
       <div className={style.cardFooter}>
         <a className={style.cardButton} href={link} target="_blank">
           View Code on GitHub
