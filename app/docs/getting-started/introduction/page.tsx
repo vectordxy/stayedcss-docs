@@ -1,18 +1,22 @@
 import Article from "@/src/components/docs/Article";
 import CodeBlock from "@/src/components/docs/CodeBlock";
 import Section from "@/src/components/docs/Section";
+import TextBlock from "@/src/components/docs/TextBlock";
 
 export default function page() {
   return (
     <Article title="What is StayedCSS?">
       StayedCSS is a static CSS library designed for Next.js App Router. It
       provides full support for both server and client components, offering
-      various styling.
+      various styling. It automatically creates a{" "}
+      <TextBlock>stayedcss</TextBlock> folder in the root directory of your
+      project and generates CSS files within it. Each component's styles are
+      stored in this folder, organized based on their component ID.
       <Section title="1. Supports Both Server and Client">
-        It provides seamless support for both Next.js server and client
-        components. It generates CSS optimized for each environment, ensuring a
-        stable styling experience. You can use it without worrying about
-        compatibility between server and client components.
+        It provides support for both Next.js server and client components. It
+        generates CSS optimized for each environment, ensuring a stable styling
+        experience. You can use it without worrying about compatibility between
+        server and client components.
       </Section>
       <Section title="2. No Learning Curve, You Already Know">
         With the same syntax as standard CSS, StayedCSS eliminates the learning
