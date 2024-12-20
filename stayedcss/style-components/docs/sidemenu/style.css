@@ -4,3 +4,4 @@
 .title-components-docs-sidemenu { margin: 8px 0;  }
 .box-components-docs-sidemenu { padding: 6px 27px;  }
 .container-components-docs-sidemenu { width: 270px; position: sticky; top: 70px; font-size: 14px; padding: 16px 0; height: 500px;  }
+@media (max-width: 1024px) { .container-components-docs-sidemenu { display: none;  } } 

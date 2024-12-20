@@ -132,6 +132,11 @@ const style = stClient({
     textDecoration: "underline",
     color: colors[5],
   },
+  "@laptop": {
+    container: {
+      display: "none",
+    },
+  },
 });
 
 stClientDark({
